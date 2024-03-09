@@ -5,6 +5,8 @@ export const SectionOne = () => {
 
     return (
       <section class="section one">
-  </section>
+        <div className="two-box">
+        </div>
+      </section>
     )
 }
