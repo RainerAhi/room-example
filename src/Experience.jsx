@@ -47,9 +47,9 @@ export default function Experience() {
     tl
 
     .to(camera.position, {
-      x: 1.15,
+      x: 10,
       y: 0,
-      z: 1.6,
+      z: 0,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -62,22 +62,9 @@ export default function Experience() {
     //TWO TO THREE
 
     .to(camera.position, {
-      x: -1.15,
-      y: 0.1,
-      z: 0.5,
-      scrollTrigger: {
-        trigger: ".three",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
-
-    .to(scene.position, {
-      x: 0,
+      x: 10,
       y: 0,
-      z: 0,
+      z: 10,
       scrollTrigger: {
         trigger: ".three",
         start: "top bottom",
@@ -108,7 +95,7 @@ export default function Experience() {
     <>
       <SoftShadows intensity={ 20 } />
       <Suspense fallback={ <Loading /> } >
-          <Model position={ [ 0, 0, 0 ] } rotation={ [ 0, 0, 0 ] } />
+          <Model position={ [ 0, -4, 0 ] } rotation={ [ 0, 0, 0 ] } />
       </Suspense>
       <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ true } enablePan={ false } />
       <Environment preset='apartment' />
