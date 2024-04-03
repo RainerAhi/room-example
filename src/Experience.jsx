@@ -193,7 +193,7 @@ export default function Experience() {
       <Suspense fallback={ <Loading /> } >
           <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
       </Suspense>
-      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ true } enablePan={ false } />
+      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <Environment environmentIntensity={ 0.1 } preset='warehouse' />
       <ambientLight intensity={0.15} />
       <directionalLight 
