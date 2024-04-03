@@ -72,6 +72,8 @@ function App() {
             <SectionTwo />
             <SectionThree />
             <SectionFour />
+            <SectionFive />
+            <SectionSix />
             
       </>
     )
