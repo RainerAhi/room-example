@@ -1,12 +1,11 @@
 import { Suspense, useRef, useState, useLayoutEffect, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment, Lightformer, MeshReflectorMaterial, Sparkles, Float, MeshPortalMaterial, useTexture, useHelper, Stage, SoftShadows, Effects } from '@react-three/drei'
+import { OrbitControls, Environment, SoftShadows, ScrollControls,  } from '@react-three/drei'
 import { easing } from 'maath'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three"
-import CustomEffects from './Effects'
 import { Loading } from './Loading'
 import Model from './Model'
 gsap.registerPlugin(ScrollTrigger)
@@ -190,9 +189,9 @@ export default function Experience() {
   return (
     <>
       <SoftShadows intensity={ 10 } />
-      <Suspense fallback={ <Loading /> } >
+      <ScrollControls damping={0.5} maxSpeed={0.5} pages={10}>
           <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
-      </Suspense>
+      </ScrollControls>
       <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={true } enablePan={ false } />
       <Environment files="./env.hdr" background />
       <ambientLight intensity={0.15} />

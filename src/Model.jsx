@@ -13,7 +13,6 @@ export default function Model(props) {
 
 
   return (
-    <ScrollControls damping={0.2} maxSpeed={0.5} pages={2}>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
@@ -324,7 +323,6 @@ export default function Model(props) {
         </group>
       </group>
     </group>
-    </ScrollControls>
   )
 }
 

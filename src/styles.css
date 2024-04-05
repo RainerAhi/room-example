@@ -41,41 +41,9 @@ body,
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 0; /* Keep this as it is */
+  z-index: 20; /* Keep this as it is */
+  pointer-events: all;
 }
-
-.two-box {
-  width: 100%;
-  height: 100%;
-  z-index: 2; /* Increase the z-index to a value higher than that of .experience */
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-}
-
-
-
-
-html.lenis {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
-
 
 /* LOADING SCREEN */
 
@@ -139,17 +107,16 @@ html.lenis {
 
 
 @media (max-width: 768px) {
-  /* Adjustments for navigation bar */
-  body {
-    height:100%;
-  }
 
-  .two-box {
-    width: 100%;
-    height: 100%;
-    z-index: 10;
+  .loading-screen__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+    margin: 0;
   }
-
+  
 
 }
 
