@@ -46,144 +46,144 @@ export default function Experience() {
 
     tl
 
-    .to(camera.position, {
-      x: -2,
-      y: 0,
-      z: 0,
-      scrollTrigger: {
-        trigger: ".two",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(camera.position, {
+    //   x: -2,
+    //   y: 0,
+    //   z: 0,
+    //   scrollTrigger: {
+    //     trigger: ".two",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
-    .to(controlsRef.current.target, {
-      x: 0,
-      y: -10,
-      z: -10,
-      scrollTrigger: {
-        trigger: ".two",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(controlsRef.current.target, {
+    //   x: 0,
+    //   y: -10,
+    //   z: -10,
+    //   scrollTrigger: {
+    //     trigger: ".two",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
-    //TWO TO THREE
+    // //TWO TO THREE
 
-    .to(camera.position, {
-      x: 5,
-      y: 0,
-      z: -4,
-      scrollTrigger: {
-        trigger: ".three",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(camera.position, {
+    //   x: 5,
+    //   y: 0,
+    //   z: -4,
+    //   scrollTrigger: {
+    //     trigger: ".three",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
-    .to(controlsRef.current.target, {
-      x: 0,
-      y: -5,
-      z: 5,
-      scrollTrigger: {
-        trigger: ".three",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(controlsRef.current.target, {
+    //   x: 0,
+    //   y: -5,
+    //   z: 5,
+    //   scrollTrigger: {
+    //     trigger: ".three",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
     
-    //THREE TO FOUR
+    // //THREE TO FOUR
 
-    .to(camera.position, {
-      x: 3,
-      y: 0,
-      z: 1,
-      scrollTrigger: {
-        trigger: ".four",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(camera.position, {
+    //   x: 3,
+    //   y: 0,
+    //   z: 1,
+    //   scrollTrigger: {
+    //     trigger: ".four",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
-    .to(controlsRef.current.target, {
-      x: 3.5,
-      y: -3,
-      z: -3,
-      scrollTrigger: {
-        trigger: ".four",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+    // .to(controlsRef.current.target, {
+    //   x: 3.5,
+    //   y: -3,
+    //   z: -3,
+    //   scrollTrigger: {
+    //     trigger: ".four",
+    //     start: "top bottom",
+    //     end: "top top",
+    //     scrub: true,
+    //     immediateRender: false,
+    //   },
+    // })
 
-        //FOUR TO FIVE
+    //     //FOUR TO FIVE
 
-        .to(camera.position, {
-          x: 2,
-          y: -0.25,
-          z: 1,
-          scrollTrigger: {
-            trigger: ".five",
-            start: "top bottom",
-            end: "top top",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
+    //     .to(camera.position, {
+    //       x: 2,
+    //       y: -0.25,
+    //       z: 1,
+    //       scrollTrigger: {
+    //         trigger: ".five",
+    //         start: "top bottom",
+    //         end: "top top",
+    //         scrub: true,
+    //         immediateRender: false,
+    //       },
+    //     })
     
-        .to(controlsRef.current.target, {
-          x: 5,
-          y: 0,
-          z: 6,
-          scrollTrigger: {
-            trigger: ".five",
-            start: "top bottom",
-            end: "top top",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
+    //     .to(controlsRef.current.target, {
+    //       x: 5,
+    //       y: 0,
+    //       z: 6,
+    //       scrollTrigger: {
+    //         trigger: ".five",
+    //         start: "top bottom",
+    //         end: "top top",
+    //         scrub: true,
+    //         immediateRender: false,
+    //       },
+    //     })
 
-                //FIVE TO SIX
+    //             //FIVE TO SIX
 
-                .to(camera.position, {
-                  x: -1,
-                  y: 0,
-                  z: 3,
-                  scrollTrigger: {
-                    trigger: ".six",
-                    start: "top bottom",
-                    end: "top top",
-                    scrub: true,
-                    immediateRender: false,
-                  },
-                })
+    //             .to(camera.position, {
+    //               x: -1,
+    //               y: 0,
+    //               z: 3,
+    //               scrollTrigger: {
+    //                 trigger: ".six",
+    //                 start: "top bottom",
+    //                 end: "top top",
+    //                 scrub: true,
+    //                 immediateRender: false,
+    //               },
+    //             })
             
-                .to(controlsRef.current.target, {
-                  x: -5,
-                  y: -3,
-                  z: 0,
-                  scrollTrigger: {
-                    trigger: ".six",
-                    start: "top bottom",
-                    end: "top top",
-                    scrub: true,
-                    immediateRender: false,
-                  },
-                })
+    //             .to(controlsRef.current.target, {
+    //               x: -5,
+    //               y: -3,
+    //               z: 0,
+    //               scrollTrigger: {
+    //                 trigger: ".six",
+    //                 start: "top bottom",
+    //                 end: "top top",
+    //                 scrub: true,
+    //                 immediateRender: false,
+    //               },
+    //             })
 
   }, [])
 
@@ -193,8 +193,8 @@ export default function Experience() {
       <Suspense fallback={ <Loading /> } >
           <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
       </Suspense>
-      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-      <Environment environmentIntensity={ 0.1 } preset='warehouse' />
+      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={true } enablePan={ false } />
+      <Environment files="./env.hdr" background />
       <ambientLight intensity={0.15} />
       <directionalLight 
       shadow-bias={-0.001} castShadow position={[15, 20, 0]} 

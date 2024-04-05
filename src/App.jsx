@@ -68,12 +68,6 @@ function App() {
                 <CanvasContainer />
             </div>
 
-            <SectionOne />
-            <SectionTwo />
-            <SectionThree />
-            <SectionFour />
-            <SectionFive />
-            <SectionSix />
             
       </>
     )

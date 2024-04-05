@@ -1,22 +1,19 @@
-import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import React, { useEffect, useRef } from 'react'
+import { useGLTF, useAnimations, PerspectiveCamera, ScrollControls, useScroll } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
 export default function Model(props) {
+  const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./roommodel.glb')
-  const { actions } = useAnimations(animations, group)
+  const { nodes, materials, animations } = useGLTF('./ex31.glb')
+  const { actions, ref } = useAnimations(animations, group)
 
-  // Start animations when the component mounts
-  React.useEffect(() => {
-    // Ensure there are actions
-    if (actions && Object.keys(actions).length > 0) {
-      // Start all animations
-      Object.values(actions).forEach(action => {
-        action.play()
-      })
-    }
-  }, [actions])
+  useEffect(() => void (actions.Anim_0.reset().play().paused = true), [])
+  useFrame(() => (actions.Anim_0.time = actions.Anim_0.getClip().duration * scroll.offset))
+
+
   return (
+    <ScrollControls damping={0.2} maxSpeed={0.5} pages={2}>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
@@ -98,7 +95,86 @@ export default function Model(props) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <group name="DOT1" />
+        <group name="DOT1" >
+        </group>
+        <mesh
+          name="Cube_(Copy)"
+          castShadow
+          receiveShadow
+          geometry={nodes['Cube_(Copy)'].geometry}
+          material={materials.emeka}
+          position={[-8.909, 1.6, -0.099]}
+          rotation={[-2.503, -1.553, -2.503]}
+        >
+          <PerspectiveCamera  makeDefault/>
+        </mesh>
+        <mesh
+          name="traventine_stools"
+          castShadow
+          receiveShadow
+          geometry={nodes.traventine_stools.geometry}
+          material={materials['Material.002']}
+          position={[0.061, 0.353, 2.056]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="traventine_stools_1"
+          castShadow
+          receiveShadow
+          geometry={nodes.traventine_stools_1.geometry}
+          material={materials['Material.002']}
+          position={[0.061, 0.353, 2.056]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <group name="headphones" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+          <mesh
+            name="headphones1"
+            castShadow
+            receiveShadow
+            geometry={nodes.headphones1.geometry}
+            material={materials.emeka}
+            position={[279.646, -163.759, -84.48]}
+            rotation={[0, 0, 1.916]}
+          />
+          <mesh
+            name="headphones2"
+            castShadow
+            receiveShadow
+            geometry={nodes.headphones2.geometry}
+            material={materials.emeka}
+            position={[300.198, -112.533, -90.507]}
+            rotation={[0, 0, 0.669]}
+          />
+          <mesh
+            name="headphones3"
+            castShadow
+            receiveShadow
+            geometry={nodes.headphones3.geometry}
+            material={materials.emeka}
+            position={[365.71, -101.876, -77.737]}
+            rotation={[0, 0, -0.644]}
+          />
+          <mesh
+            name="headphones4"
+            castShadow
+            receiveShadow
+            geometry={nodes.headphones4.geometry}
+            material={materials.emeka}
+            position={[384.116, -182.896, -67.234]}
+            rotation={[0, 0, 1.405]}
+          />
+          <mesh
+            name="headphones5"
+            castShadow
+            receiveShadow
+            geometry={nodes.headphones5.geometry}
+            material={materials.emeka}
+            position={[329.042, -210.728, -74.513]}
+            rotation={[0, 0, 0.113]}
+          />
+        </group>
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -121,17 +197,8 @@ export default function Model(props) {
           name="susu"
           position={[3.355, 1.232, 2.796]}
           rotation={[Math.PI / 2, 0.157, 0]}
-          scale={0.01}>
-          <mesh
-            name="traventine_stools"
-            castShadow
-            receiveShadow
-            geometry={nodes.traventine_stools.geometry}
-            material={materials['Material.002']}
-            position={[-339.082, -73.988, 35.117]}
-            rotation={[0, -0.157, 0]}
-          />
-        </group>
+          scale={0.01}
+        />
         <mesh
           name="emeka"
           castShadow
@@ -257,7 +324,8 @@ export default function Model(props) {
         </group>
       </group>
     </group>
+    </ScrollControls>
   )
 }
 
-useGLTF.preload('./roommodel.glb')
+useGLTF.preload('./ex31.glb')
