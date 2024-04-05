@@ -23,12 +23,11 @@ function App() {
 
     return (
       <>
-            <LoadingScreen />
-            <div  className="experience">
-                <CanvasContainer />
-            </div>
-
-            
+        <LoadingScreen />
+        
+        <div  className="experience">
+              <CanvasContainer />
+        </div>    
       </>
     )
 }
