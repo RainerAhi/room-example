@@ -1,5 +1,6 @@
 import { OrbitControls, Environment, SoftShadows, ScrollControls,  } from '@react-three/drei'
 import Model from './Model'
+import { Canvas } from '@react-three/fiber'
 
 export default function Experience() {
 
@@ -9,7 +10,6 @@ export default function Experience() {
       <ScrollControls damping={0.5} maxSpeed={0.5} pages={10}>
           <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
       </ScrollControls>
-      <OrbitControls minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={true } enablePan={ false } />
       <Environment files="./env.hdr" background />
       <ambientLight intensity={0.15} />
       <directionalLight 
