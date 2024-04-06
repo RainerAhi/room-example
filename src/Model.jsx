@@ -118,7 +118,7 @@ export default function Model(props) {
           position={[-8.909, 1.6, -0.099]}
           rotation={[-2.503, -1.553, -2.503]}
         >
-          <PerspectiveCamera fov={isMobile ? 35 : 25} makeDefault/>
+          <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
         </mesh>
         <mesh
           name="traventine_stools"
