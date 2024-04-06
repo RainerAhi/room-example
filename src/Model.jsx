@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations, PerspectiveCamera, ScrollControls, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+import { useMediaQuery } from 'react-responsive';
 
 export default function Model(props) {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('./ex31.glb')
@@ -10,6 +12,17 @@ export default function Model(props) {
 
   useEffect(() => void (actions.Anim_0.reset().play().paused = true), [])
   useFrame(() => (actions.Anim_0.time = actions.Anim_0.getClip().duration * scroll.offset))
+
+  useEffect(() => {
+    // Loop through all animations and start them except Anim_0
+    for (const key in actions) {
+      if (key !== 'Anim_0') {
+        actions[key].reset().play();
+      }
+    }
+  }, []); // Run this effect only once after component mount
+
+  
 
 
   return (
@@ -105,7 +118,7 @@ export default function Model(props) {
           position={[-8.909, 1.6, -0.099]}
           rotation={[-2.503, -1.553, -2.503]}
         >
-          <PerspectiveCamera  makeDefault/>
+          <PerspectiveCamera fov={isMobile ? 35 : 25} makeDefault/>
         </mesh>
         <mesh
           name="traventine_stools"
