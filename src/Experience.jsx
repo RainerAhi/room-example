@@ -12,7 +12,7 @@ export default function Experience() {
       </ScrollControls>
       <Environment files="./env.hdr" background />
       <directionalLight 
-      shadow-bias={-0.001} castShadow position={[0, 20, 10]} 
+      shadow-bias={-0.001} castShadow position={[12, 20, 0]} 
       intensity={1} shadow-mapSize={2048} shadow-mapSize-width={4096} 
       shadow-mapSize-height={4096} shadow-camera-near={0.1} shadow-camera-far={100} 
       >
