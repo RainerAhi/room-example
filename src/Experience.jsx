@@ -2,6 +2,7 @@ import { Environment, SoftShadows, ScrollControls } from '@react-three/drei'
 import Model from './Model'
 import { Suspense } from 'react'
 import { Loading } from './Loading'
+import { Bloom, EffectComposer, N8AO, SSAO, Vignette } from '@react-three/postprocessing'
 
 export default function Experience() {
 
@@ -10,9 +11,12 @@ export default function Experience() {
       <SoftShadows intensity={ 1 } />
       <Suspense fallback={ <Loading /> }  >
         <ScrollControls damping={0.5} maxSpeed={0.5} pages={10}>
-          <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
+            <Model position={ [ 0, -2, 0 ] } rotation={ [ 0, 0, 0 ] } />
         </ScrollControls>
       </Suspense>
+      <EffectComposer disableNormalPass >
+        <N8AO  aoRadius={1} intensity={1.5} />
+      </EffectComposer>
       <Environment files="./env.hdr" background />
       <directionalLight 
       color={ "#F7F5D0" }
