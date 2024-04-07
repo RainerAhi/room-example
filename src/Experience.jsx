@@ -2,7 +2,6 @@ import { Environment, SoftShadows, ScrollControls } from '@react-three/drei'
 import Model from './Model'
 import { Suspense } from 'react'
 import { Loading } from './Loading'
-import { EffectComposer } from '@react-three/postprocessing'
 
 export default function Experience() {
 
@@ -24,7 +23,6 @@ export default function Experience() {
         <orthographicCamera attach="shadow-camera" args={[-20, 20, -20, 20, 0.1, 100]} />
       </directionalLight>
       <ambientLight color={ "blue" } intensity={ 0.1 } />
-      <EffectComposer />
       </>
   )
 }
