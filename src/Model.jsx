@@ -75,7 +75,7 @@ export default function Model(props) {
           material={materials.Tavera_Marble_tfyoeeec}
           position={[-2.437, 0.647, -2.079]}
           rotation={[Math.PI / 2, 0, -0.728]}
-          scale={0}
+          scale={0.00015}
         />
         <mesh
           name="Buch_1001"
