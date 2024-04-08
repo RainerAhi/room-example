@@ -17,7 +17,7 @@ export default function Experience() {
       <EffectComposer disableNormalPass >
         <N8AO distanceFalloff={ 1 } aoRadius={2} intensity={1.5} />
       </EffectComposer>
-      <Environment files="./env3.hdr" background />
+      <Environment files="./env4.hdr" background />
       <directionalLight 
       color={ "#ECECCF" }
       shadow-bias={-0.001} castShadow position={[10, 35, -25]} 
