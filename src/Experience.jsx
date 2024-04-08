@@ -19,7 +19,7 @@ export default function Experience() {
         <N8AO distanceFalloff={ 1 } aoRadius={2} intensity={1.5} />
       </EffectComposer>
       <directionalLight 
-      color={ "#F8D9B3" }
+      color={ "#F7E0B9" }
       shadow-bias={-0.001} castShadow position={[10, 35, -25]} 
       intensity={1.4} shadow-mapSize={2048} shadow-mapSize-width={4096} 
       shadow-mapSize-height={4096} shadow-camera-near={0.1} shadow-camera-far={100} 
