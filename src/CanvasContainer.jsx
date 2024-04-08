@@ -8,7 +8,7 @@ function ToneMapping() {
     const { gl, scene } = useThree(({ gl, scene }) => ({ gl, scene }));
     useEffect(() => {
       gl.toneMapping = THREE.ACESFilmicToneMapping;
-      gl.toneMappingExposure = 0.9;
+      gl.toneMappingExposure = 1;
       scene.traverse((object) => {
         if (object.material) {
           object.material.needsUpdate = true;
