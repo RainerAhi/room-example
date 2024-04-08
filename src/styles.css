@@ -12,8 +12,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background: rgb(168,183,242);
-  background: linear-gradient(90deg, rgba(168,183,242,1) 0%, rgba(95,130,243,1) 100%);
+  background-color: #87CEEB;
 }
 
 ::-webkit-scrollbar {
