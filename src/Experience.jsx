@@ -20,7 +20,7 @@ export default function Experience() {
       <directionalLight 
       color={ "#ECECCF" }
       shadow-bias={-0.001} castShadow position={[10, 35, -25]} 
-      intensity={1.4} shadow-mapSize={2048} shadow-mapSize-width={4096} 
+      intensity={1.5} shadow-mapSize={2048} shadow-mapSize-width={4096} 
       shadow-mapSize-height={4096} shadow-camera-near={0.1} shadow-camera-far={100} 
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
