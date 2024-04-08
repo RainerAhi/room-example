@@ -16,7 +16,7 @@ export default function Experience() {
       <EffectComposer disableNormalPass >
         <N8AO distanceFalloff={ 1 } aoRadius={2} intensity={1.5} />
       </EffectComposer>
-      <Environment files="./env.hdr" background />
+      <Environment files="./env2.hdr" background />
       <directionalLight 
       color={ "#ECECCF" }
       shadow-bias={-0.001} castShadow position={[10, 35, -25]} 
@@ -25,7 +25,7 @@ export default function Experience() {
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>
-      <ambientLight color={ "blue" } intensity={ 0.13 } />
+      <ambientLight color={ "blue" } intensity={ 0 } />
       </>
   )
 }
