@@ -8,7 +8,7 @@ export default function Experience() {
 
   return (
     <>
-      <SoftShadows intensity={ 1 } />
+      <SoftShadows />
       <Suspense fallback  >
         <ScrollControls damping={0.5} maxSpeed={0.5} pages={10}>
             <Model position={ [ 0, -2, 0 ] } />
