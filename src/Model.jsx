@@ -23,8 +23,6 @@ export default function Model(props) {
   }, []); // Run this effect only once after component mount
 
   
-
-
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
@@ -107,19 +105,7 @@ export default function Model(props) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <group name="DOT1" >
-        </group>
-        <mesh
-          name="Cube_(Copy)"
-          castShadow
-          receiveShadow
-          geometry={nodes['Cube_(Copy)'].geometry}
-          material={materials.emeka}
-          position={[-8.909, 1.6, -0.099]}
-          rotation={[-2.503, -1.553, -2.503]}
-        >
-          <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
-        </mesh>
+        <group name="DOT1" />
         <mesh
           name="traventine_stools"
           castShadow
@@ -187,6 +173,27 @@ export default function Model(props) {
             rotation={[0, 0, 0.113]}
           />
         </group>
+        <mesh
+          name="Cube_(Copy)"
+          castShadow
+          receiveShadow
+          geometry={nodes['Cube_(Copy)'].geometry}
+          material={materials.emeka}
+          position={[-8.909, 1.6, -0.099]}
+          rotation={[-2.503, -1.553, -2.503]}
+        >
+           <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
+        </mesh>
+        <mesh
+          name="titles"
+          castShadow
+          receiveShadow
+          geometry={nodes.titles.geometry}
+          material={materials['Material.001']}
+          position={[-0.05, 0.005, 0.048]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -218,16 +225,6 @@ export default function Model(props) {
           geometry={nodes.emeka.geometry}
           material={materials.emeka}
           position={[1.662, 0.207, -0.779]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
-        <mesh
-          name="titles"
-          castShadow
-          receiveShadow
-          geometry={nodes.titles.geometry}
-          material={materials['Material.001']}
-          position={[0.238, 0.001, 0.326]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
@@ -299,7 +296,7 @@ export default function Model(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.small_statue.geometry}
-                material={materials.emeka}
+                material={materials['Material.013']}
                 position={[22.766, 2.288, -22.387]}
                 rotation={[0.052, 0.209, 2.997]}
               />
@@ -339,4 +336,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('./ex31.glb')
+useGLTF.preload('./final.glb')

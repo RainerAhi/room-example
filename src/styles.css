@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
 
+@font-face {
+  font-family: 'Avenir'; /* Name to reference this font */
+  src: url('/avenir.OTF') format('opentype'); /* Path to your OTF font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -62,7 +69,6 @@ body,
   width: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 25px;
   margin-right: 25px;
 }
@@ -70,17 +76,40 @@ body,
 .navigation-text {
   background-color: transparent;
   border: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #f3f1ed;
   z-index: 20;
+  align-self: flex-start;
 }
 
-.fa-solid, .fa-grip-lines {
-  font-size: 3rem;
-  color: #f3f1ed;
+.navigation-icon {
+  height: auto;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 2.5%;
+}
+
+.icon-top {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin-bottom: 5%;
+}
+
+.icon-bottom {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin-top: 5%;
+}
+
+.black {
+  background-color: black;
 }
 
 /* FULL OVERLAY */
@@ -91,7 +120,7 @@ body,
 
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .fade-exit {
@@ -100,7 +129,7 @@ body,
 
 .fade-exit-active {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 /* Additional styles for full-overlay content */
@@ -130,6 +159,12 @@ body,
   height: 100%;
   display: flex;
   flex-direction: column;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.overlay-content.active {
+  opacity: 1;
 }
 
 .overlay-visible {
@@ -148,14 +183,15 @@ body,
   align-items: center;
   gap: 25px;
   margin-right: 25px;
+  align-self: flex-end;
 }
 
 .navigation-text-back {
   background-color: transparent;
   border: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
   z-index: 20;
@@ -164,6 +200,72 @@ body,
 .lines-two {
   font-size: 3rem;
   color: black;
+}
+
+.containers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space evenly between the two rows */
+  align-items: center;
+  overflow: scroll;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly; /* Space evenly within each row */
+}
+
+.container {
+  width: 18%; /* Set the width of each container */
+  margin: 10px; /* Add margin around each container */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.container-one-image {
+  width: 100%;
+  padding-top: 100%; /* Create a square by setting height relative to width */
+  position: relative;
+  background-image: url('/projectimage.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.container-heading {
+  margin-top: 1%;
+  margin-bottom: 0;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.container-description {
+  margin-top: 0;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+/* PROJECT OVERLAYS */
+
+.project-one-overlay, .project-two-overlay, .project-three-overlay, .project-four-overlay, .project-five-overlay, .project-six-overlay, .project-seven-overlay, .project-eight-overlay {
+  position: absolute;
+  background-color: #f3f1ed;
+  width: 100%;
+  height: 100%;
+}
+
+.close-button {
+  border: none;
+}
+
+.fa-solid, .fa-xmark {
+  font-size: 40px;
 }
 
 
@@ -200,7 +302,7 @@ body,
 }
 
 .loading-screen__title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Avenir', sans-serif;
   font-weight: 900;
   font-size: 10rem;
   text-transform: uppercase;
@@ -227,10 +329,67 @@ body,
 
 @media (max-width: 768px) {
 
+
+  /* OVERLAY CONTENT */
+
+
+  .containers {
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space evenly between the two rows */
+    align-items: center;
+    overflow: scroll;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Space evenly within each row */
+  }
+  
+  .container {
+    width: 100%; /* Set the width of each container */
+    margin: 0; /* Add margin around each container */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .container-one-image {
+    width: 100%;
+    padding-top: 100%; /* Create a square by setting height relative to width */
+    position: relative;
+    background-image: url('/projectimage.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container-heading {
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: black;
+  }
+  
+  .container-description {
+    margin-top: 0;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1rem;
+    color: black;
+  }
+
+  /* LOADING MOBILE */
+
   .loading-screen__title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Avenir', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 5rem;
     text-transform: uppercase;
     color: black;
     margin: 0;
