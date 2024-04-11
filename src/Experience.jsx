@@ -1,4 +1,4 @@
-import { Environment, SoftShadows, ScrollControls } from '@react-three/drei'
+import { Environment, SoftShadows, ScrollControls, Html } from '@react-three/drei'
 import Model from './Model'
 import { Suspense } from 'react'
 import { EffectComposer, N8AO } from '@react-three/postprocessing'
@@ -13,6 +13,9 @@ export default function Experience() {
         <ScrollControls damping={0.5} maxSpeed={0.5} pages={10}>
             <Model position={ [ 0, -2, 0 ] } />
             <Environment files="./env4.hdr" background />
+            <Html>
+              <h1>Scroll</h1>
+            </Html>
         </ScrollControls>
       </Suspense>
       <EffectComposer disableNormalPass >

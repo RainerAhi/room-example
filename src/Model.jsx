@@ -7,7 +7,7 @@ export default function Model(props) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./ex31.glb')
+  const { nodes, materials, animations } = useGLTF('./final2.glb')
   const { actions, ref } = useAnimations(animations, group)
 
   useEffect(() => void (actions.Anim_0.reset().play().paused = true), [])
@@ -182,7 +182,7 @@ export default function Model(props) {
           position={[-8.909, 1.6, -0.099]}
           rotation={[-2.503, -1.553, -2.503]}
         >
-           <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
+          <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
         </mesh>
         <mesh
           name="titles"
@@ -336,4 +336,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('./final.glb')
+useGLTF.preload('./final2.glb')

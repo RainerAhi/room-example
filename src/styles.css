@@ -23,7 +23,7 @@ body,
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: auto;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -53,6 +53,14 @@ body,
 
 /* NAV OVERLAY */
 
+.scroll-overlay {
+  position: absolute; /* Use fixed for positioning relative to the viewport */
+  top: 50%; /* Position 50% down from the top */
+  left: 50%; /* Position 50% across from the left */
+  transform: translate(-50%, -50%); /* Center the div perfectly */
+  z-index: 30; /* Ensure it's above other elements */
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -67,7 +75,9 @@ body,
 
 .overlay-navigation {
   width: auto;
+  height: auto;
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 25px;
   margin-right: 25px;
@@ -81,7 +91,6 @@ body,
   text-transform: uppercase;
   color: #f3f1ed;
   z-index: 20;
-  align-self: flex-start;
 }
 
 .navigation-icon {
@@ -90,20 +99,19 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: flex-start;
-  margin-top: 2.5%;
+  align-self: center;
 }
 
 .icon-top {
   width: 100%;
-  height: 5px;
+  height: 2.5px;
   background-color: white;
   margin-bottom: 5%;
 }
 
 .icon-bottom {
   width: 100%;
-  height: 5px;
+  height: 2.5px;
   background-color: white;
   margin-top: 5%;
 }
@@ -210,12 +218,14 @@ body,
   justify-content: space-between; /* Space evenly between the two rows */
   align-items: center;
   overflow: scroll;
+  margin-top: 1.25%;
 }
 
 .row {
   width: 100%;
   display: flex;
-  justify-content: space-evenly; /* Space evenly within each row */
+  justify-content: left; /* Space evenly within each row */
+  margin-left: 10%;
 }
 
 .container {
@@ -224,6 +234,8 @@ body,
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  cursor: pointer;
+  margin-right: 10%;
 }
 
 .container-one-image {
@@ -253,19 +265,72 @@ body,
 
 /* PROJECT OVERLAYS */
 
-.project-one-overlay, .project-two-overlay, .project-three-overlay, .project-four-overlay, .project-five-overlay, .project-six-overlay, .project-seven-overlay, .project-eight-overlay {
+.project-one-overlay, .project-two-overlay, .project-three-overlay, .project-four-overlay, .project-five-overlay, .project-six-overlay, .project-seven-overlay, .project-eight-overlay, .project-nine-overlay {
   position: absolute;
   background-color: #f3f1ed;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project-picture-overlay {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-text-overlay {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-pictures {
+  width: 100%;
+  height: 100vw;
+  background-color: #333;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+
+.project-top-text {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.project-description {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: black;
+  margin-left: 10%;
+}
+
+.fa-solid, .fa-xmark {
+  font-size: 1.5rem;
 }
 
 .close-button {
   border: none;
-}
-
-.fa-solid, .fa-xmark {
-  font-size: 40px;
 }
 
 
@@ -329,6 +394,17 @@ body,
 
 @media (max-width: 768px) {
 
+  .navigation-text-back {
+    background-color: transparent;
+    border: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: black;
+    z-index: 20;
+  }
+
 
   /* OVERLAY CONTENT */
 
@@ -336,7 +412,7 @@ body,
   .containers {
     width: 90%;
     margin-left: 5%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Space evenly between the two rows */
@@ -349,6 +425,7 @@ body,
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; /* Space evenly within each row */
+    margin-left: 0%;
   }
   
   .container {
@@ -394,6 +471,79 @@ body,
     color: black;
     margin: 0;
   }
+
+  /* PROJECT OVERLAYS MOBILE */
+
+.project-one-overlay, .project-two-overlay, .project-three-overlay, .project-four-overlay, .project-five-overlay, .project-six-overlay, .project-seven-overlay, .project-eight-overlay, .project-nine-overlay {
+  position: absolute;
+  background-color: #f3f1ed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-picture-overlay {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-left: 5%;
+}
+
+.project-pictures {
+  width: 100%;
+  height: 90vw;
+  background-color: #333;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-text-overlay {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  overflow: scroll;
+}
+
+.project-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 0%;
+}
+
+.project-top-text {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.project-description {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: black;
+  margin-left: 0%;
+}
+
+.fa-solid, .fa-xmark {
+  font-size: 1.5rem;
+}
+
+.close-button {
+  border: none;
+}
   
 
 }
