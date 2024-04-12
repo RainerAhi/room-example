@@ -90,8 +90,11 @@ body,
 }
 
 .fa-solid, .fa-arrow-down-long {
-  color: #f3f1ed;
   font-size: 50px;
+}
+
+.white {
+  color: #f3f1ed;
 }
 
 /* NAV OVERLAY */

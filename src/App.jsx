@@ -145,11 +145,11 @@ function App() {
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
         <div className="scroll-top" >
-          <i class="fa-solid fa-arrow-down-long"></i>
+          <i class="fa-solid fa-arrow-down-long white"></i>
           <h1 className="scroll-text" >Scroll to start tour</h1>
         </div>
         <div className="scroll-bottom" >
-          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle white"></i>
           <h1 className="scroll-text" >Click on items for info about the project</h1>
         </div>
       </div>
