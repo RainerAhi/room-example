@@ -22,27 +22,6 @@ const LoadingScreen = () => {
 
 function App() {
 
-  const [hideScrollText, setHideScrollText] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 100;
-
-      if (window.scrollY > scrollThreshold) {
-        setHideScrollText(true);
-      } else {
-        setHideScrollText(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const { progress, active } = useProgress();
   const [showFullOverlay, setShowFullOverlay] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -143,9 +122,32 @@ function App() {
   const centerProjects = projectKeys.slice(3, 6); // Last four projects
   const bottomProjects = projectKeys.slice(6, 9); // Last four projects
 
+  const { active } = useProgress();
+  const [showScrollOverlay, setShowScrollOverlay] = useState(true);
+
+  useEffect(() => {
+    if (!active) {
+      // Hide scroll overlay after 5 seconds when loading is complete
+      const timer = setTimeout(() => {
+        setShowScrollOverlay(false);
+      }, 5000);
+
+      return () => {
+        clearTimeout(timer); // Clear the timer if component unmounts or active changes
+      };
+    }
+  }, [active]); // Only run this effect when `active` changes
+
+
   return (
     <>
       <LoadingScreen />
+
+      {showScrollOverlay && (
+        <div className="scroll-overlay">
+          <h1>Please scroll</h1>
+        </div>
+      )}
 
       {/* Main experience container */}
       <div className="experience">
