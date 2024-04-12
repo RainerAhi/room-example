@@ -158,6 +158,73 @@ body,
   background-color: black;
 }
 
+.navigation-icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f1ed;
+  z-index: 21;
+}
+
+.navigation-icon-icon {
+  height: auto;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.navigation-icon-overlay-content {
+  position: relative;
+  width: 60%;
+  height: 95%;
+  margin-top: 1.75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.overlay-texts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.overlay-list {
+  list-style: none;
+  padding: 0;
+}
+
+.container-description, .container-description-list  {
+  margin-top: 0;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.container-description-list {
+  margin-bottom: 0px;
+}
+
+.list-list, .list-list-bottom {
+  margin-left: 10px;
+  margin-top: 0;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.list-list-bottom {
+  margin-bottom: 5px;
+}
+
 /* FULL OVERLAY */
 
 .fade-enter {
@@ -179,6 +246,7 @@ body,
 }
 
 /* Additional styles for full-overlay content */
+
 .full-overlay {
   position: fixed;
   top: 0;
@@ -291,13 +359,6 @@ body,
   font-family: 'Avenir', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: black;
-}
-
-.container-description {
-  margin-top: 0;
-  font-family: 'Avenir', sans-serif;
-  font-size: 1rem;
   color: black;
 }
 
@@ -513,6 +574,25 @@ body,
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
     color: black;
+  }
+
+  .navigation-icon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #f3f1ed;
+    z-index: 21;
+  }
+  .navigation-icon-overlay-content {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin-top: 1.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   /* LOADING MOBILE */

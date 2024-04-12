@@ -24,9 +24,19 @@ function App() {
 
   const [showFullOverlay, setShowFullOverlay] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showNavigationIconOverlay, setShowNavigationIconOverlay] = useState(false);
+
+  const handleNavigationIconClick = () => {
+    setShowNavigationIconOverlay(true); // Show the navigation icon overlay
+  };
+
+  const handleNavigationIconCloseClick = () => {
+    setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+  };
 
   const handleNavigationClick = () => {
     setShowFullOverlay(true);
+    setShowNavigationIconOverlay(false); // Show the navigation icon overlay
   };
 
   const handleCloseOverlay = () => {
@@ -165,12 +175,74 @@ function App() {
           <button className="navigation-text" onClick={handleNavigationClick}>
             ARCHIVE
           </button>
-          <div className="navigation-icon">
+          <div className="navigation-icon" onClick={handleNavigationIconClick} >
             <div className="icon-top" />
             <div className="icon-bottom" />
           </div>
         </div>
       </div>
+
+      <CSSTransition
+        in={showNavigationIconOverlay}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+      <div className={`navigation-icon-overlay ${showNavigationIconOverlay ? "active" : ""}`}>
+        <div className="overlay">
+          <div className="overlay-navigation">
+            <button className="navigation-text">ARCHIVE</button>
+            <div className="navigation-icon-icon" onClick={handleNavigationIconCloseClick} >
+              <div className="icon-top black" />
+              <div className="icon-bottom black" />
+            </div>
+          </div>
+        </div>
+        <div className="navigation-icon-overlay-content" >
+
+          <div className="overlay-texts" >
+            <h1 className="container-heading" >IMPRESSUM</h1>
+            <ul className="overlay-list" >
+              <li><h1 className="container-description">Angaben gemäß § 5 TMG</h1></li>
+              <li><h1 className="container-description">Moritz Otto</h1></li>
+              <li><h1 className="container-description">Siemensstraße 30</h1></li>
+              <li><h1 className="container-description">12459 Berlin</h1></li>
+            </ul>
+          </div>
+
+          <div className="overlay-texts" >
+            <h1 className="container-heading" >KONTAKT</h1>
+            <ul className="overlay-list" >
+              <li><h1 className="container-description">Telefon: +49 (0) 172 7994533</h1></li>
+              <li><h1 className="container-description">E-Mail: inquiries@siemensstr30.de</h1></li>
+              <li><h1 className="container-description">Umsatzsteuer-ID</h1></li>
+              <li><h1 className="container-description-list">Umsatzsteuer - Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:</h1>
+                <li className="list-list" >Handelsregister des Amtsgerichts</li>
+                <li className="list-list-bottom" >Charlottenburg HRB 240741B</li>
+              </li>
+              <li><h1 className="container-description">USt. ID. DE275450300</h1></li>
+              <li><h1 className="container-description">Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</h1></li>
+            </ul>
+          </div>
+
+          <div className="overlay-texts" >
+            <h1 className="container-heading" >HAFTUNG FÜR INHALTE</h1>
+            <ul className="overlay-list" >
+              <li><h1 className="container-description">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht ver pflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</h1></li>
+              <li><h1 className="container-description">Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</h1></li>
+            </ul>
+          </div>
+
+          <div className="overlay-texts" >
+            <h1 className="container-heading" >HAFTUNG FÜR LINKS</h1>
+            <ul className="overlay-list" >
+              <li><h1 className="container-description">Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der </h1></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      </CSSTransition>
 
       {/* Full overlay with CSS transition */}
       <CSSTransition
@@ -186,7 +258,7 @@ function App() {
               <button className="navigation-text-back" onClick={handleCloseOverlay}>
                 SHOWROOM
               </button>
-              <div className="navigation-icon">
+              <div className="navigation-icon" onClick={handleNavigationIconClick} >
                 <div className="icon-top black" />
                 <div className="icon-bottom black" />
               </div>
