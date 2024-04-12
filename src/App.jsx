@@ -11,7 +11,7 @@ const LoadingScreen = () => {
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        <h1 className="loading-screen__title">ROOM</h1>
+        <h1 className="loading-screen__title">siemensstr.30 is a creative agency with a focus on gen-z design</h1>
         <div className="progress__container">
           <div className="progress__bar" style={{ width: `${progress}%` }}></div>
         </div>
@@ -143,11 +143,16 @@ function App() {
     <>
       <LoadingScreen />
 
-      {showScrollOverlay && (
-        <div className="scroll-overlay">
-          <h1>Please scroll</h1>
+      <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
+        <div className="scroll-top" >
+          <i class="fa-solid fa-arrow-down-long"></i>
+          <h1 className="scroll-text" >Scroll to start tour</h1>
         </div>
-      )}
+        <div className="scroll-bottom" >
+          <i class="fa-solid fa-circle"></i>
+          <h1 className="scroll-text" >Click on items for info about the project</h1>
+        </div>
+      </div>
 
       {/* Main experience container */}
       <div className="experience">
