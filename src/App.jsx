@@ -148,6 +148,12 @@ function App() {
     }
   }, [active]); // Only run this effect when `active` changes
 
+  const [showOtherDiv, setShowOtherDiv] = useState(false);
+
+  const toggleOverlay = () => {
+    setShowOtherDiv(prevState => !prevState);
+  };
+
 
   return (
     <>
@@ -166,8 +172,39 @@ function App() {
 
       {/* Main experience container */}
       <div className="experience">
-        <CanvasContainer />
+        <CanvasContainer toggleOverlay={toggleOverlay} />
       </div>
+
+      <CSSTransition
+        in={showOtherDiv}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+        <div className={`white-button-overlay ${showOtherDiv ? "active" : ""}`}>
+          <div className="white-button-navigation" >
+            <div className="white-button-navigation-texts" >
+              <h1 className="container-heading" >EMEKA OKEKE EXHIBITION</h1>
+              <h1 className="container-description" >in progress</h1>
+            </div>
+            <button className="close-button" onClick={toggleOverlay}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div className="white-button-content" >
+            <div className="white-button-left" >
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+            </div>
+            <div className="white-button-right" >
+              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
+              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
 
       {/* Overlay button to trigger full overlay */}
       <div className="overlay">

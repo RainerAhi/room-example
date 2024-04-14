@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.84.2",
-    "@react-three/fiber": "^8.14.2",
+    "@react-three/drei": "^8.20.2",
+    "@react-three/fiber": "^8.16.1",
     "@react-three/postprocessing": "^2.15.1",
     "@studio-freight/lenis": "^1.0.26",
     "@types/three": "^0.156.0",

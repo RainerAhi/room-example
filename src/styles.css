@@ -26,14 +26,6 @@ body,
   display: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: black;
-}
-/* TRACK */
-::-webkit-scrollbar-track {
-  background-color: white;
-}
-
 .section {
   width: 100%;
   height: 100vh;
@@ -143,14 +135,14 @@ body,
 .icon-top {
   width: 100%;
   height: 2.5px;
-  background-color: white;
+  background-color: #f3f1ed;
   margin-bottom: 5%;
 }
 
 .icon-bottom {
   width: 100%;
   height: 2.5px;
-  background-color: white;
+  background-color: #f3f1ed;
   margin-top: 5%;
 }
 
@@ -433,6 +425,77 @@ body,
 }
 
 
+/* 3D EXPERIENCE OVERLAYS */
+
+.white-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #f3f1ed;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+}
+
+.white-button-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 95;
+  width: 40%;
+  height: 100vh;
+  background-color: #f3f1ed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.white-button-navigation {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.white-button-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.white-button-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.white-button-image {
+  width: 90%;
+}
+
+.white-button-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+
+
+
 /* LOADING SCREEN */
 
 .loading-screen {
@@ -486,7 +549,7 @@ body,
 }
 
 .loading-screen__title {
-  animation: fillText 2s linear forwards; /* Animation lasts 2 seconds */
+  animation: fillText 1.5s linear forwards; /* Animation lasts 2 seconds */
 }
 
 .progress__container {
@@ -679,6 +742,73 @@ body,
 
 .close-button {
   border: none;
+}
+
+/* 3D EXPERIENCE OVERLAYS MOBILE */
+
+.white-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #f3f1ed;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+}
+
+.white-button-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 95;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f1ed;
+  display: flex;
+  flex-direction: column;
+}
+
+.white-button-navigation {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.white-button-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.white-button-left {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.white-button-image {
+  width: 90%;
+}
+
+.white-button-right {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 5%;
 }
   
 

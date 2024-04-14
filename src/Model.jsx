@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { useGLTF, useAnimations, PerspectiveCamera, ScrollControls, useScroll } from '@react-three/drei'
+import React, { useEffect, useRef, useState } from 'react'
+import { useGLTF, useAnimations, PerspectiveCamera, ScrollControls, useScroll, Html } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive';
 
@@ -22,8 +22,10 @@ export default function Model(props) {
     }
   }, []); // Run this effect only once after component mount
 
+
   
   return (
+    <>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
@@ -47,7 +49,7 @@ export default function Model(props) {
             geometry={nodes.drawer1.geometry}
             material={materials.metal}
             position={[36.498, -0.699, -16.911]}
-          />
+            />
           <mesh
             name="null"
             castShadow
@@ -84,7 +86,8 @@ export default function Model(props) {
           position={[-2.022, 0.652, -2.045]}
           rotation={[-Math.PI, -1.476, 0]}
           scale={0.01}
-        />
+        >
+        </mesh>
         <mesh
           name="Buch_7001"
           castShadow
@@ -333,6 +336,8 @@ export default function Model(props) {
         </group>
       </group>
     </group>
+
+  </>
   )
 }
 
