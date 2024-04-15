@@ -43,6 +43,53 @@ body,
   pointer-events: all;
 }
 
+/* SOUND TOGGLE */
+
+.sound-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 2.5%;
+  z-index: 15;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.sound-text {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  color: #f3f1ed;
+  font-weight: 100;
+  line-height: 1rem;
+}
+
+.sound-line {
+  width: 50px;
+  height: 2px;
+  background-color: #f3f1ed;
+  transition: transform 0.2s ease; /* Smooth transition for transform property */
+}
+
+.sound-line.playing {
+  animation: soundWave 0.5s infinite alternate; /* Apply animation when 'playing' class is present */
+}
+
+@keyframes soundWave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(3);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 /* SCROLL OVERLAY */
 
 .scroll-overlay {

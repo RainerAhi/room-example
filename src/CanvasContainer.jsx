@@ -20,23 +20,6 @@ function ToneMapping() {
   }
 
 export default function CanvasContainer({ toggleOverlay }) {
-  
-
-  const [audio] = useState(new Audio('/websitesound.mp3'));
-
-  useEffect(() => {
-    // Set up audio loop and start playing on component mount
-    audio.loop = true;
-    audio.play().catch(error => {
-      console.error('Failed to play audio:', error);
-    });
-
-    return () => {
-      // Clean up audio on component unmount
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, [audio]);
 
   const handleWhiteButtonClick = () => {
     toggleOverlay(); // Call toggleOverlay function from props

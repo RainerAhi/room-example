@@ -22,6 +22,39 @@ const LoadingScreen = () => {
 
 function App() {
 
+  const [audio] = useState(new Audio('/websitesound.mp3'));
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+
+  useEffect(() => {
+    // Set up audio loop and start playing on component mount
+    audio.loop = true;
+    audio.play().then(() => {
+      setIsSoundPlaying(true); // Update state when audio starts playing
+    }).catch(error => {
+      console.error('Failed to play audio:', error);
+    });
+
+    return () => {
+      // Clean up audio on component unmount
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [audio]);
+
+  const toggleSound = () => {
+    setIsSoundPlaying((prevState) => !prevState);
+    if (isSoundPlaying) {
+      audio.pause();
+      setIsSoundPlaying(false);
+    } else {
+      audio.play().then(() => {
+        setIsSoundPlaying(true);
+      }).catch(error => {
+        console.error('Failed to play audio:', error);
+      });
+    }
+  };
+
   const [showFullOverlay, setShowFullOverlay] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [showNavigationIconOverlay, setShowNavigationIconOverlay] = useState(false);
@@ -158,6 +191,11 @@ function App() {
   return (
     <>
       <LoadingScreen />
+
+      <div className="sound-container" onClick={toggleSound} >
+      <div className={`sound-line ${isSoundPlaying ? "playing" : ""}`} />
+        <h1 className="sound-text">{isSoundPlaying ? "Click to mute" : "Click for sound"}</h1>
+      </div>
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
         <div className="scroll-top" >
