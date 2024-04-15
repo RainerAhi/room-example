@@ -57,6 +57,7 @@ body,
   flex-direction: row;
   align-items: center;
   gap: 25px;
+  cursor: pointer;
 }
 
 .sound-text {
