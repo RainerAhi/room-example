@@ -230,8 +230,7 @@ function App() {
           <div className="overlay-navigation">
             <button className="navigation-text">ARCHIVE</button>
             <div className="navigation-icon-icon" onClick={handleNavigationIconCloseClick} >
-              <div className="icon-top black" />
-              <div className="icon-bottom black" />
+              <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
         </div>

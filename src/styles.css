@@ -167,6 +167,7 @@ body,
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  align-items: end;
 }
 
 .navigation-icon-overlay-content {
@@ -438,6 +439,13 @@ body,
   pointer-events: all;
   position: relative;
   z-index: 1;
+  transition: 0.5s ease-in;
+  transform-origin: center;
+}
+
+.white-button:hover {
+  width: 50px;
+  transition: 0.5s ease-in;
 }
 
 .white-button-overlay {

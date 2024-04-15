@@ -38,8 +38,6 @@ export default function CanvasContainer({ toggleOverlay }) {
     };
   }, [audio]);
 
-  const [showOtherDiv, setShowOtherDiv] = useState(false);
-
   const handleWhiteButtonClick = () => {
     toggleOverlay(); // Call toggleOverlay function from props
   };
