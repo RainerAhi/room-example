@@ -212,6 +212,7 @@ function App() {
 
   const toggleOverlay = () => {
     setShowOtherDiv(prevState => !prevState);
+    playSoundEffect();
   };
 
 
