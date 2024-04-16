@@ -7,7 +7,7 @@ export default function Model(props) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final2.glb')
+  const { nodes, materials, animations } = useGLTF('./final3.glb')
   const { actions, ref } = useAnimations(animations, group)
 
   useEffect(() => void (actions.Anim_0.reset().play().paused = true), [])
@@ -25,18 +25,8 @@ export default function Model(props) {
 
   
   return (
-    <>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <mesh
-          name="maps_baker1001"
-          castShadow
-          receiveShadow
-          geometry={nodes.maps_baker1001.geometry}
-          material={materials['Material.011']}
-          position={[-10.52, 1.629, 0]}
-          rotation={[1.545, 0.006, -1.557]}
-        />
         <group
           name="sideboard"
           position={[-1.899, 0.321, -1.935]}
@@ -49,14 +39,6 @@ export default function Model(props) {
             geometry={nodes.drawer1.geometry}
             material={materials.metal}
             position={[36.498, -0.699, -16.911]}
-            />
-          <mesh
-            name="null"
-            castShadow
-            receiveShadow
-            geometry={nodes['null'].geometry}
-            material={materials.metal}
-            position={[-21.156, -12.272, -18.723]}
           />
           <mesh
             name="stone"
@@ -68,16 +50,6 @@ export default function Model(props) {
           />
         </group>
         <mesh
-          name="null_1"
-          castShadow
-          receiveShadow
-          geometry={nodes.null_1.geometry}
-          material={materials.Tavera_Marble_tfyoeeec}
-          position={[-2.437, 0.647, -2.079]}
-          rotation={[Math.PI / 2, 0, -0.728]}
-          scale={0.00015}
-        />
-        <mesh
           name="Buch_1001"
           castShadow
           receiveShadow
@@ -86,8 +58,7 @@ export default function Model(props) {
           position={[-2.022, 0.652, -2.045]}
           rotation={[-Math.PI, -1.476, 0]}
           scale={0.01}
-        >
-        </mesh>
+        />
         <mesh
           name="Buch_7001"
           castShadow
@@ -194,6 +165,26 @@ export default function Model(props) {
           geometry={nodes.titles.geometry}
           material={materials['Material.001']}
           position={[-0.05, 0.005, 0.048]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="null"
+          castShadow
+          receiveShadow
+          geometry={nodes['null'].geometry}
+          material={materials.metal}
+          position={[-2.111, 0.509, -2.058]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="maps_baker1"
+          castShadow
+          receiveShadow
+          geometry={nodes.maps_baker1.geometry}
+          material={materials['Material.011']}
+          position={[-10.521, 1.629, 0.001]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
@@ -336,9 +327,7 @@ export default function Model(props) {
         </group>
       </group>
     </group>
-
-  </>
   )
 }
 
-useGLTF.preload('./final2.glb')
+useGLTF.preload('./final3.glb')
