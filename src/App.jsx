@@ -24,6 +24,7 @@ function App() {
 
   const [audio] = useState(new Audio('/websitesound.mp3'));
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+  const [soundTextVisible, setSoundTextVisible] = useState(true);
 
   useEffect(() => {
     // Set up audio loop and start playing on component mount
@@ -72,7 +73,7 @@ function App() {
         console.error('Failed to play audio:', error);
       });
     }
-    playSoundEffect();
+    setSoundTextVisible(false); // Hide sound-text permanently after first click
   };
 
   const [showFullOverlay, setShowFullOverlay] = useState(false);
@@ -81,28 +82,34 @@ function App() {
 
   const handleNavigationIconClick = () => {
     setShowNavigationIconOverlay(true); // Show the navigation icon overlay
+    playSoundEffect();
   };
 
   const handleNavigationIconCloseClick = () => {
     setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+    playSoundEffect();
   };
 
   const handleNavigationClick = () => {
     setShowFullOverlay(true);
     setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+    playSoundEffect();
   };
 
   const handleCloseOverlay = () => {
     setShowFullOverlay(false);
     setSelectedProject(null); // Reset selected project
+    playSoundEffect();
   };
 
   const handleProjectClick = (projectName) => {
     setSelectedProject(projectName);
+    playSoundEffect();
   };
 
   const handleCloseProjectOverlay = () => {
     setSelectedProject(null); // Reset selected project
+    playSoundEffect();
   };
 
   const projectDetails = {
@@ -218,7 +225,9 @@ function App() {
         ) : (
           <div className="sound-line" />
         )}
-        <h1 className="sound-text">{isSoundPlaying ? "" : "Click for sound"}</h1>
+        {soundTextVisible && (
+          <h1 className="sound-text">Click for sound</h1>
+        )}
       </div>
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
@@ -302,7 +311,9 @@ function App() {
               ) : (
               <div className="sound-line-black" />
               )}
-              <h1 className="sound-text-black">{isSoundPlaying ? "" : "Click for sound"}</h1>
+              {soundTextVisible && (
+                <h1 className="sound-text">Click for sound</h1>
+              )}
         </div>
         <div className="navigation-icon-overlay-content" >
 
@@ -375,7 +386,9 @@ function App() {
               ) : (
               <div className="sound-line-black" />
               )}
-              <h1 className="sound-text-black">{isSoundPlaying ? "" : "Click for sound"}</h1>
+              {soundTextVisible && (
+                <h1 className="sound-text">Click for sound</h1>
+              )}
             </div>
             <div className="containers">
               {/* Render top projects */}
