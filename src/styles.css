@@ -49,14 +49,14 @@ body,
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-left: 2.5%;
+  margin-left: 2%;
   z-index: 15;
   width: auto;
-  height: 75px;
+  height: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
   cursor: pointer;
   overflow: hidden;
 }
@@ -74,10 +74,25 @@ body,
   line-height: 1rem;
 }
 
+.sound-text-black {
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 100;
+  line-height: 1rem;
+}
+
 .sound-line {
-  width: 35px;
+  width: 25px;
   height: 2px;
   background-color: #f3f1ed;
+  transition: transform 0.2s ease; /* Smooth transition for transform property */
+}
+
+.sound-line-black {
+  width: 25px;
+  height: 2px;
+  background-color: black;
   transition: transform 0.2s ease; /* Smooth transition for transform property */
 }
 
@@ -620,6 +635,24 @@ body,
 
 
 @media (max-width: 768px) {
+
+
+  /* SOUND CONTAINER MOBILE */
+
+  .kontakt-sound-container {
+    position: relative;
+    margin-top: -3%;
+    margin-left: 2.5%;
+    z-index: 15;
+    width: 300px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
 
   .navigation-text-back {
     background-color: transparent;

@@ -213,11 +213,11 @@ function App() {
       <LoadingScreen />
 
       <div className="sound-container" onClick={toggleSound} >
-      {isSoundPlaying ? (
-        <img className="sound-container-image" src="/playingicon.png" />
-      ) : (
-        <div className="sound-line" />
-      )}
+        {isSoundPlaying ? (
+          <img className="sound-container-image" src="/playingicon.png" />
+        ) : (
+          <div className="sound-line" />
+        )}
         <h1 className="sound-text">{isSoundPlaying ? "" : "Click for sound"}</h1>
       </div>
 
@@ -296,6 +296,14 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="sound-container kontakt-sound-container" onClick={toggleSound} >
+              {isSoundPlaying ? (
+              <img className="sound-container-image" src="/playingblack.png" />
+              ) : (
+              <div className="sound-line-black" />
+              )}
+              <h1 className="sound-text-black">{isSoundPlaying ? "" : "Click for sound"}</h1>
+        </div>
         <div className="navigation-icon-overlay-content" >
 
           <div className="overlay-texts" >
@@ -360,6 +368,14 @@ function App() {
                 <div className="icon-top black" />
                 <div className="icon-bottom black" />
               </div>
+            </div>
+            <div className="sound-container" onClick={toggleSound} >
+              {isSoundPlaying ? (
+              <img className="sound-container-image" src="/playingblack.png" />
+              ) : (
+              <div className="sound-line-black" />
+              )}
+              <h1 className="sound-text-black">{isSoundPlaying ? "" : "Click for sound"}</h1>
             </div>
             <div className="containers">
               {/* Render top projects */}
