@@ -52,12 +52,18 @@ body,
   margin-left: 2.5%;
   z-index: 15;
   width: auto;
-  height: auto;
+  height: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.sound-container-image {
+  height: 35%;
+  position: relative;
 }
 
 .sound-text {
@@ -69,26 +75,10 @@ body,
 }
 
 .sound-line {
-  width: 50px;
+  width: 35px;
   height: 2px;
   background-color: #f3f1ed;
   transition: transform 0.2s ease; /* Smooth transition for transform property */
-}
-
-.sound-line.playing {
-  animation: soundWave 0.5s infinite alternate; /* Apply animation when 'playing' class is present */
-}
-
-@keyframes soundWave {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(3);
-  }
-  100% {
-    transform: scaleY(1);
-  }
 }
 
 /* SCROLL OVERLAY */

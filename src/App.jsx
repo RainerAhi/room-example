@@ -41,6 +41,25 @@ function App() {
     };
   }, [audio]);
 
+  const soundEffectFiles = [
+    '/a.mp3',
+    '/c.mp3',
+    '/d.mp3',
+    '/e2.mp3',
+    '/f.mp3',
+    '/h.mp3',
+    '/e.mp3',
+  ];
+
+  const playSoundEffect = () => {
+    // Select a random sound effect file from the array
+    const randomIndex = Math.floor(Math.random() * soundEffectFiles.length);
+    const selectedSoundEffect = new Audio(soundEffectFiles[randomIndex]);
+    selectedSoundEffect.play().catch(error => {
+      console.error('Failed to play sound effect:', error);
+    });
+  };
+
   const toggleSound = () => {
     setIsSoundPlaying((prevState) => !prevState);
     if (isSoundPlaying) {
@@ -53,6 +72,7 @@ function App() {
         console.error('Failed to play audio:', error);
       });
     }
+    playSoundEffect();
   };
 
   const [showFullOverlay, setShowFullOverlay] = useState(false);
@@ -193,8 +213,12 @@ function App() {
       <LoadingScreen />
 
       <div className="sound-container" onClick={toggleSound} >
-      <div className={`sound-line ${isSoundPlaying ? "playing" : ""}`} />
-        <h1 className="sound-text">{isSoundPlaying ? "Click to mute" : "Click for sound"}</h1>
+      {isSoundPlaying ? (
+        <img className="sound-container-image" src="/playingicon.png" />
+      ) : (
+        <div className="sound-line" />
+      )}
+        <h1 className="sound-text">{isSoundPlaying ? "" : "Click for sound"}</h1>
       </div>
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
