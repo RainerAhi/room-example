@@ -208,10 +208,64 @@ function App() {
     }
   }, [active]); // Only run this effect when `active` changes
 
-  const [showOtherDiv, setShowOtherDiv] = useState(false);
+  const [showOverlayOne, setShowOverlayOne] = useState(false);
+  const [showOverlayTwo, setShowOverlayTwo] = useState(false);
+  const [showOverlayThree, setShowOverlayThree] = useState(false);
+  const [showOverlayFour, setShowOverlayFour] = useState(false);
+  const [showOverlayFive, setShowOverlayFive] = useState(false);
 
-  const toggleOverlay = () => {
-    setShowOtherDiv(prevState => !prevState);
+  const toggleOverlayOne = () => {
+    setShowOverlayOne(prevState => !prevState);
+
+    setShowOverlayTwo(false);
+    setShowOverlayThree(false);
+    setShowOverlayFour(false);
+    setShowOverlayFive(false);
+
+    playSoundEffect();
+  };
+
+  const toggleOverlayTwo = () => {
+    setShowOverlayTwo(prevState => !prevState);
+
+    setShowOverlayOne(false);
+    setShowOverlayThree(false);
+    setShowOverlayFour(false);
+    setShowOverlayFive(false);
+
+    playSoundEffect();
+  };
+
+  const toggleOverlayThree = () => {
+    setShowOverlayThree(prevState => !prevState);
+
+    setShowOverlayOne(false);
+    setShowOverlayTwo(false);
+    setShowOverlayFour(false);
+    setShowOverlayFive(false);
+
+    playSoundEffect();
+  };
+
+  const toggleOverlayFour = () => {
+    setShowOverlayFour(prevState => !prevState);
+
+    setShowOverlayOne(false);
+    setShowOverlayTwo(false);
+    setShowOverlayThree(false);
+    setShowOverlayFive(false);
+
+    playSoundEffect();
+  };
+
+  const toggleOverlayFive = () => {
+    setShowOverlayFive(prevState => !prevState);
+
+    setShowOverlayOne(false);
+    setShowOverlayTwo(false);
+    setShowOverlayThree(false);
+    setShowOverlayFour(false);
+
     playSoundEffect();
   };
 
@@ -244,22 +298,148 @@ function App() {
 
       {/* Main experience container */}
       <div className="experience">
-        <CanvasContainer toggleOverlay={toggleOverlay} />
+        <CanvasContainer toggleOverlayOne={toggleOverlayOne} toggleOverlayTwo={toggleOverlayTwo} toggleOverlayThree={toggleOverlayThree} toggleOverlayFour={toggleOverlayFour} toggleOverlayFive={toggleOverlayFive} />
       </div>
 
+      {/* 3D experince overlays */}
+
       <CSSTransition
-        in={showOtherDiv}
+        in={showOverlayOne}
         timeout={1000} // Adjust timeout to match your CSS transition duration
         classNames="fade"
         unmountOnExit
       >
-        <div className={`white-button-overlay ${showOtherDiv ? "active" : ""}`}>
+        <div className={`white-button-overlay ${showOverlayOne ? "active" : ""}`}>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >EMEKA OKEKE EXHIBITION</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlay}>
+            <button className="close-button" onClick={toggleOverlayOne}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div className="white-button-content" >
+            <div className="white-button-left" >
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+            </div>
+            <div className="white-button-right" >
+              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
+              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={showOverlayTwo}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+        <div className={`white-button-overlay ${showOverlayTwo ? "active" : ""}`}>
+          <div className="white-button-navigation" >
+            <div className="white-button-navigation-texts" >
+              <h1 className="container-heading" >PROJECT 2</h1>
+              <h1 className="container-description" >in progress</h1>
+            </div>
+            <button className="close-button" onClick={toggleOverlayTwo}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div className="white-button-content" >
+            <div className="white-button-left" >
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+            </div>
+            <div className="white-button-right" >
+              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
+              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={showOverlayThree}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+        <div className={`white-button-overlay ${showOverlayThree ? "active" : ""}`}>
+          <div className="white-button-navigation" >
+            <div className="white-button-navigation-texts" >
+              <h1 className="container-heading" >PROJECT 3</h1>
+              <h1 className="container-description" >in progress</h1>
+            </div>
+            <button className="close-button" onClick={toggleOverlayThree}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div className="white-button-content" >
+            <div className="white-button-left" >
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+            </div>
+            <div className="white-button-right" >
+              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
+              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={showOverlayFour}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+        <div className={`white-button-overlay ${showOverlayFour ? "active" : ""}`}>
+          <div className="white-button-navigation" >
+            <div className="white-button-navigation-texts" >
+              <h1 className="container-heading" >PROJECT 4</h1>
+              <h1 className="container-description" >in progress</h1>
+            </div>
+            <button className="close-button" onClick={toggleOverlayFour}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div className="white-button-content" >
+            <div className="white-button-left" >
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/projectimage.png" />
+            </div>
+            <div className="white-button-right" >
+              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
+              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={showOverlayFive}
+        timeout={1000} // Adjust timeout to match your CSS transition duration
+        classNames="fade"
+        unmountOnExit
+      >
+        <div className={`white-button-overlay ${showOverlayFive ? "active" : ""}`}>
+          <div className="white-button-navigation" >
+            <div className="white-button-navigation-texts" >
+              <h1 className="container-heading" >PROJECT 5</h1>
+              <h1 className="container-description" >in progress</h1>
+            </div>
+            <button className="close-button" onClick={toggleOverlayFive}>
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
