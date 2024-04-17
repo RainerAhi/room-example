@@ -46,7 +46,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
          <Canvas shadows >
             <Html
               as="div"
-              distanceFactor={5}
+              distanceFactor={10}
               wrapperClass=""
               position={[-1.899, -1.5, -1.935]}
             >
@@ -55,7 +55,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
             <Html
               as="div"
-              distanceFactor={5}
+              distanceFactor={10}
               wrapperClass=""
               position={[3.25, -1.1, -1.5]}
             >
@@ -64,7 +64,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
             <Html
               as="div"
-              distanceFactor={5}
+              distanceFactor={10}
               wrapperClass=""
               position={[3.355, -0.7, 2.796]}
             >
@@ -73,7 +73,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
             <Html
               as="div"
-              distanceFactor={5}
+              distanceFactor={10}
               wrapperClass=""
               position={[-2.85, -1.5, 1.36]}
             >
@@ -82,7 +82,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
             <Html
               as="div"
-              distanceFactor={5}
+              distanceFactor={10}
               wrapperClass=""
               position={[-10.5, -0.75, 0]}
             >

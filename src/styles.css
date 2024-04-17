@@ -485,20 +485,19 @@ body,
 /* 3D EXPERIENCE OVERLAYS */
 
 .white-button {
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
   background-color: #f3f1ed;
   pointer-events: all;
   position: relative;
   z-index: 1;
-  transition: 0.5s ease-in;
-  transform-origin: center;
+  transition: width 0.15s ease-in-out, margin 0.15s ease-in-out; /* Add margin to transition */
 }
 
 .white-button:hover {
-  width: 50px;
-  transition: 0.5s ease-in;
+  width: 20px; /* Double the width on hover */
+  margin-left: -5px; /* Adjust left margin to center the expansion */
 }
 
 .white-button-overlay {
