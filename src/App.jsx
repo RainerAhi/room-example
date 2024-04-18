@@ -125,9 +125,12 @@ function App() {
       title: "NEUENDORF HOUSE SOCIAL MEDIA ADVERTISEMENT",
       description: "On-going partnership",
       additionalInfo: "Ongoing partnership with Neuendorf House for social media advertising.",
-      images: ["/projectimage.png", "/projectimage.png", "/projectimage.png"],
-      projectsDescription: " in progressDiassim expliti orerfer erchil et ad utas modia volo con es verunti ditiis modipsus consequ isciis ape non rem nobisitas arum quos magnate ium rehenietus essit, nectur? Fugia qui custrum quos ex ese nus, sam eum utemporit, ut faccus, odit moluptaspic te pra comni doluptatur as quat fuga. As ea num aut latur, cum autati ipitiasped mintus dipsant esequi od mil est pro temo inient moloribearum hil ipsusam quidelit, volectem imeture mporeni enimos quid eium quossum ipiendi im estius, nis saperro volenim inctat quo es dolescia des rem doluptin rehent est, odi volorectis aut quia dolesci piendebis eum etur re consero moditatus aborestium faccum fugita int, corae. Nem facerum quibus si odi aligenia dustrum endi dolupic aborepr erchit et modit, conecupit, aperitat.",
-      projectsDescriptionTwo: "Ficid evere nim ent ressequati odis nos di de nim quatatus dis ne nim evelesequi que pa nes dolupicit officienis doluptaquunt hariatemos as quae pratenihil maiorrumqui dolo quatis eatur?Pis am et ommod quia nobitatempos autempe runtur, simi, volupta testrum et volorempos estisitatur antet alis eaquat.Evenis consequ iscide nimi, quossit quisi que optaquamus diorrov idipieni optibus.Id mossim voluptatum iundebitatur ad utenihi liquasp edictur?Osa plant. Idesciliqui dis doloreictur? Quisciist doloris imoluptaecto molorum reic torepera non remquos dolore atet aut il impos audi conecepro quis evelenis con coreic tem. Ut"
+      images: ["/neue1.jpg", "/neue2.jpg", "/neue3.jpg"],
+      projectsDescription: "Our ongoing Partnership with the Neuendorf House is a project that honors us deeply, while also challenging us to do justice to the artistic masterpiece of Claudio Silverstrin and John Pawson. The House was finished in 1989 and is one of the most important architectural buildings in the world. The task is to establish the house as a brand and to expand the recognition of the house from architecture students and experts towards a global audience. ",
+      projectsDescriptionTwo: "This includes the building of a social media strategy as well as content production, collaboration management with clothing and lifestyle brands that carry the same minimalistic and luxurious approach and the development of a brand strategy.",
+      projectsDescriptionThree: "Our first steps were to renew the Instagram account by removing old content and starting a new regular post strategy with content made by renowned photographers that had visited the house before. To express our gratitude for an article by the Openhouse Magazine we created a dedicated post showing the magazine in a CGI rebuild of the house.",
+      projectsDescriptionFour: "The reel includes an exact representation of the house that we built in 3D, to further work with the house in the digital world. Bringing the house into the digital world is part of our strategy to expand the house as a brand into different artistic worlds. The connection between the Neuendorf House and the Art world is already made not only by the impact of the architecture but also by the families online art platform Artnet. ",
+      projectsDescriptionFive: "In the ongoing partnership it will be our challenge to establish the Neuendorf House also in the new generations while maintaining the class and artistic approach of the cultural inheritance.",
     },
     "project-three": {
       title: "SUSU SOCIAL MEDIA ADVERTISEMENT",
@@ -142,7 +145,7 @@ function App() {
       description: "In progress",
       additionalInfo: "Design project with Highsnobiety, currently in progress.",
       images: ["/projectimage.png", "/projectimage.png", "/projectimage.png"],
-      projectsDescription: " in progressDiassim expliti orerfer erchil et ad utas modia volo con es verunti ditiis modipsus consequ isciis ape non rem nobisitas arum quos magnate ium rehenietus essit, nectur? Fugia qui custrum quos ex ese nus, sam eum utemporit, ut faccus, odit moluptaspic te pra comni doluptatur as quat fuga. As ea num aut latur, cum autati ipitiasped mintus dipsant esequi od mil est pro temo inient moloribearum hil ipsusam quidelit, volectem imeture mporeni enimos quid eium quossum ipiendi im estius, nis saperro volenim inctat quo es dolescia des rem doluptin rehent est, odi volorectis aut quia dolesci piendebis eum etur re consero moditatus aborestium faccum fugita int, corae. Nem facerum quibus si odi aligenia dustrum endi dolupic aborepr erchit et modit, conecupit, aperitat.",
+      projectsDescription: "Our ongoing Partnership with the Neuendorf House is a project that honors us deeply, while also challenging us to do justice to the artistic masterpiece of Claudio Silverstrin and John Pawson. The House was finished in 1989 and is one of the most important architectural buildings in the world. The task is to establish the house as a brand and to expand the recognition of the house from architecture students and experts towards a global audience. ",
       projectsDescriptionTwo: "Ficid evere nim ent ressequati odis nos di de nim quatatus dis ne nim evelesequi que pa nes dolupicit officienis doluptaquunt hariatemos as quae pratenihil maiorrumqui dolo quatis eatur?Pis am et ommod quia nobitatempos autempe runtur, simi, volupta testrum et volorempos estisitatur antet alis eaquat.Evenis consequ iscide nimi, quossit quisi que optaquamus diorrov idipieni optibus.Id mossim voluptatum iundebitatur ad utenihi liquasp edictur?Osa plant. Idesciliqui dis doloreictur? Quisciist doloris imoluptaecto molorum reic torepera non remquos dolore atet aut il impos audi conecepro quis evelenis con coreic tem. Ut"
     },
     "project-five": {
@@ -641,6 +644,9 @@ function App() {
                   </div>
                   <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
                   <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionTwo}</p>
+                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionThree}</p>
+                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFour}</p>
+                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFive}</p>
                 </div>
               </div>
             )}
