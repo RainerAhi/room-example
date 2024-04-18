@@ -408,7 +408,7 @@ function App() {
         <div className={`white-button-overlay ${showOverlayFour ? "active" : ""}`}>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
-              <h1 className="container-heading" >PROJECT 4</h1>
+              <h1 className="container-heading" >NEUENDORF HOUSE SOCIAL MEDIA ADVERTISEMENT</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
             <button className="close-button" onClick={toggleOverlayFour}>
@@ -417,14 +417,17 @@ function App() {
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
-              <img className="white-button-image" src="/projectimage.png" />
-              <img className="white-button-image" src="/projectimage.png" />
-              <img className="white-button-image" src="/projectimage.png" />
+              <img className="white-button-image" src="/neue1.jpg" />
+              <img className="white-button-image" src="/neue2.jpg" />
+              <img className="white-button-image" src="/neue3.jpg" />
             </div>
             <div className="white-button-right" >
               <h1 className="container-heading" >BRAND CONCEPT</h1>
-              <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
-              <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
+              <h1 className="container-description" >Our ongoing Partnership with the Neuendorf House is a project that honors us deeply, while also challenging us to do justice to the artistic masterpiece of Claudio Silverstrin and John Pawson. The House was finished in 1989 and is one of the most important architectural buildings in the world. The task is to establish the house as a brand and to expand the recognition of the house from architecture students and experts towards a global audience. </h1>
+              <h1 className="container-description" >This includes the building of a social media strategy as well as content production, collaboration management with clothing and lifestyle brands that carry the same minimalistic and luxurious approach and the development of a brand strategy.</h1>
+              <h1 className="container-description" >Our first steps were to renew the Instagram account by removing old content and starting a new regular post strategy with content made by renowned photographers that had visited the house before. To express our gratitude for an article by the Openhouse Magazine we created a dedicated post showing the magazine in a CGI rebuild of the house. </h1>
+              <h1 className="container-description" >The reel includes an exact representation of the house that we built in 3D, to further work with the house in the digital world. Bringing the house into the digital world is part of our strategy to expand the house as a brand into different artistic worlds. The connection between the Neuendorf House and the Art world is already made not only by the impact of the architecture but also by the families online art platform Artnet. </h1>
+              <h1 className="container-description" >In the ongoing partnership it will be our challenge to establish the Neuendorf House also in the new generations while maintaining the class and artistic approach of the cultural inheritance.</h1>
             </div>
           </div>
         </div>
