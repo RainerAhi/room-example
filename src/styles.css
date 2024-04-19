@@ -601,7 +601,7 @@ body,
   font-family: 'Avenir', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: black;
   margin: 0;
   overflow: hidden; /* Hide overflowing text */
@@ -750,8 +750,8 @@ body,
   .loading-screen__title {
     font-family: 'Avenir', sans-serif;
     font-weight: 400;
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    font-size: 0.5rem;
+    text-transform: lowercase;
     color: black;
     margin: 0;
     overflow: hidden; /* Hide overflowing text */
