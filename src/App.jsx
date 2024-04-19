@@ -79,36 +79,47 @@ function App() {
   const [showFullOverlay, setShowFullOverlay] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [showNavigationIconOverlay, setShowNavigationIconOverlay] = useState(false);
+  const [isFullNavigationVisible, setIsFullNavigationVisible] = useState(false);
+
+  const handleFullNavigationIconClick = () => {
+    setIsFullNavigationVisible(!isFullNavigationVisible); // Toggle visibility
+  };
 
   const handleNavigationIconClick = () => {
     setShowNavigationIconOverlay(true); // Show the navigation icon overlay
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
   const handleNavigationIconCloseClick = () => {
     setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
   const handleNavigationClick = () => {
     setShowFullOverlay(true);
     setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
   const handleCloseOverlay = () => {
     setShowFullOverlay(false);
     setSelectedProject(null); // Reset selected project
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
   const handleProjectClick = (projectName) => {
     setSelectedProject(projectName);
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
   const handleCloseProjectOverlay = () => {
     setSelectedProject(null); // Reset selected project
+    setIsFullNavigationVisible(false); // Toggle visibility
     playSoundEffect();
   };
 
@@ -467,13 +478,17 @@ function App() {
       {/* Overlay button to trigger full overlay */}
       <div className="overlay">
         <div className="overlay-navigation">
-          <button className="navigation-text" onClick={handleNavigationClick}>
-            ARCHIVE
-          </button>
-          <div className="navigation-icon" onClick={handleNavigationIconClick} >
+          <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
             <div className="icon-top" />
             <div className="icon-bottom" />
           </div>
+          {/* Conditional rendering based on visibility state */}
+          {isFullNavigationVisible && (
+            <>
+              <button className="navigation-text" onClick={handleNavigationClick} >ARCHIVE</button>
+              <button className="navigation-text" onClick={handleNavigationIconClick} >IMPRESSIUM</button>
+            </>
+          )}
         </div>
       </div>
 
@@ -486,7 +501,6 @@ function App() {
       <div className={`navigation-icon-overlay ${showNavigationIconOverlay ? "active" : ""}`}>
         <div className="overlay">
           <div className="overlay-navigation">
-            <button className="navigation-text">ARCHIVE</button>
             <div className="navigation-icon-icon" onClick={handleNavigationIconCloseClick} >
               <i class="fa-solid fa-xmark"></i>
             </div>
@@ -499,7 +513,7 @@ function App() {
               <div className="sound-line-black" />
               )}
               {soundTextVisible && (
-                <h1 className="sound-text">Click for sound</h1>
+                <h1 className="sound-text"></h1>
               )}
         </div>
         <div className="navigation-icon-overlay-content" >
@@ -558,13 +572,19 @@ function App() {
         <div className={`full-overlay ${showFullOverlay ? "active" : ""}`}>
           {/* Content of the full-overlay */}
           <div className={`overlay-content ${showFullOverlay ? "active" : ""}`}>
-            <div className="overlay-navigation-visible">
-              <button className="navigation-text-back" onClick={handleCloseOverlay}>
-                SHOWROOM
-              </button>
-              <div className="navigation-icon" onClick={handleNavigationIconClick} >
-                <div className="icon-top black" />
-                <div className="icon-bottom black" />
+            <div className="overlay">
+              <div className="overlay-navigation">
+                <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
+                  <div className="icon-top black" />
+                  <div className="icon-bottom black" />
+                </div>
+                {/* Conditional rendering based on visibility state */}
+                {isFullNavigationVisible && (
+                  <>
+                    <button className="navigation-text-back" onClick={handleCloseOverlay} >SHOWROOM</button>
+                    <button className="navigation-text-back" onClick={handleNavigationIconClick} >IMPRESSIUM</button>
+                  </>
+                )}
               </div>
             </div>
             <div className="sound-container" onClick={toggleSound} >
@@ -574,7 +594,7 @@ function App() {
               <div className="sound-line-black" />
               )}
               {soundTextVisible && (
-                <h1 className="sound-text">Click for sound</h1>
+                <h1 className="sound-text"></h1>
               )}
             </div>
             <div className="containers">
