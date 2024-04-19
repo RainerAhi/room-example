@@ -149,21 +149,22 @@ body,
   top: 0;
   right: 0;
   margin-top: 0.5%;
+  margin-right: 2.5%;
   z-index: 10;
   width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
 }
 
 .overlay-navigation {
-  width: 175px;
+  width: auto;
   height: auto;
   display: flex;
-  align-items: center;
+  align-items: end;
   flex-direction: column;
-  gap: 50px;
+  gap: 100px;
   margin-right: 0px;
 }
 
@@ -171,7 +172,7 @@ body,
   background-color: transparent;
   border: none;
   font-family: 'Avenir', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: #f3f1ed;
   z-index: 20;
@@ -184,7 +185,6 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
   cursor: pointer;
 }
 
@@ -354,7 +354,7 @@ body,
   border: none;
   font-family: 'Avenir', sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: black;
   z-index: 20;
@@ -663,7 +663,7 @@ body,
     display: flex;
     align-items: end;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
     margin-right: 0px;
   }
 
@@ -700,7 +700,7 @@ body,
     border: none;
     font-family: 'Avenir', sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: black;
     z-index: 20;
