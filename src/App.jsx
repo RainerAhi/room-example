@@ -80,10 +80,14 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showNavigationIconOverlay, setShowNavigationIconOverlay] = useState(false);
   const [isFullNavigationVisible, setIsFullNavigationVisible] = useState(false);
+  const [isFullNavigationMenu, setIsFullNavigationMenu] = useState(true);
 
   const handleFullNavigationIconClick = () => {
     setIsFullNavigationVisible(!isFullNavigationVisible); // Toggle visibility
   };
+
+  const iconSrc = isFullNavigationVisible ? '/logowhite.png' : '/logowhite2.png';
+  const iconSrc2 = isFullNavigationVisible ? '/logoblack.png' : '/logoblack2.png';
 
   const handleNavigationIconClick = () => {
     setShowNavigationIconOverlay(true); // Show the navigation icon overlay
@@ -114,12 +118,14 @@ function App() {
   const handleProjectClick = (projectName) => {
     setSelectedProject(projectName);
     setIsFullNavigationVisible(false); // Toggle visibility
+    setIsFullNavigationMenu(false); 
     playSoundEffect();
   };
 
   const handleCloseProjectOverlay = () => {
     setSelectedProject(null); // Reset selected project
     setIsFullNavigationVisible(false); // Toggle visibility
+    setIsFullNavigationMenu(true); 
     playSoundEffect();
   };
 
@@ -479,8 +485,7 @@ function App() {
       <div className="overlay">
         <div className="overlay-navigation">
           <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
-            <div className="icon-top" />
-            <div className="icon-bottom" />
+            <img src={iconSrc} />
           </div>
           {/* Conditional rendering based on visibility state */}
           {isFullNavigationVisible && (
@@ -573,10 +578,10 @@ function App() {
           {/* Content of the full-overlay */}
           <div className={`overlay-content ${showFullOverlay ? "active" : ""}`}>
             <div className="overlay">
+            {isFullNavigationMenu && (
               <div className="overlay-navigation">
                 <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
-                  <div className="icon-top black" />
-                  <div className="icon-bottom black" />
+                  <img src={iconSrc2} />
                 </div>
                 {/* Conditional rendering based on visibility state */}
                 {isFullNavigationVisible && (
@@ -586,6 +591,7 @@ function App() {
                   </>
                 )}
               </div>
+              )}
             </div>
             <div className="sound-container" onClick={toggleSound} >
               {isSoundPlaying ? (
