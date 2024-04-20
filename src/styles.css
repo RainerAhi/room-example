@@ -260,6 +260,7 @@ body,
   color: black;
   font-weight: 400;
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 .container-description-list {
@@ -499,6 +500,7 @@ body,
   line-height: 1.25rem;
   color: black;
   margin-left: 10%;
+  text-align: justify;
 }
 
 .fa-solid, .fa-xmark {
