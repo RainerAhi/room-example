@@ -330,14 +330,14 @@ function App() {
         unmountOnExit
       >
         <div className={`white-button-overlay ${showOverlayOne ? "active" : ""}`}>
+          <button className="white-close-button" onClick={toggleOverlayOne}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >EMEKA OKEKE EXHIBITION</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlayOne}>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
@@ -361,14 +361,14 @@ function App() {
         unmountOnExit
       >
         <div className={`white-button-overlay ${showOverlayTwo ? "active" : ""}`}>
+          <button className="white-close-button" onClick={toggleOverlayTwo}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >PROJECT 2</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlayTwo}>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
@@ -392,14 +392,14 @@ function App() {
         unmountOnExit
       >
         <div className={`white-button-overlay ${showOverlayThree ? "active" : ""}`}>
+          <button className="white-close-button" onClick={toggleOverlayThree}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >PROJECT 3</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlayThree}>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
@@ -423,14 +423,14 @@ function App() {
         unmountOnExit
       >
         <div className={`white-button-overlay ${showOverlayFour ? "active" : ""}`}>
+            <button className="white-close-button" onClick={toggleOverlayFour}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >NEUENDORF HOUSE SOCIAL MEDIA ADVERTISEMENT</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlayFour}>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
@@ -457,14 +457,14 @@ function App() {
         unmountOnExit
       >
         <div className={`white-button-overlay ${showOverlayFive ? "active" : ""}`}>
+          <button className="white-close-button" onClick={toggleOverlayFive}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >PROJECT 5</h1>
               <h1 className="container-description" >in progress</h1>
             </div>
-            <button className="close-button" onClick={toggleOverlayFive}>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
           </div>
           <div className="white-button-content" >
             <div className="white-button-left" >
