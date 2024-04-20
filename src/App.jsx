@@ -346,7 +346,7 @@ function App() {
               <img className="white-button-image" src="/projectimage.png" />
             </div>
             <div className="white-button-right" >
-              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
               <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
             </div>
@@ -377,7 +377,7 @@ function App() {
               <img className="white-button-image" src="/projectimage.png" />
             </div>
             <div className="white-button-right" >
-              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
               <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
             </div>
@@ -408,7 +408,7 @@ function App() {
               <img className="white-button-image" src="/projectimage.png" />
             </div>
             <div className="white-button-right" >
-              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
               <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
             </div>
@@ -439,7 +439,7 @@ function App() {
               <img className="white-button-image" src="/neue3.jpg" />
             </div>
             <div className="white-button-right" >
-              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >Our ongoing Partnership with the Neuendorf House is a project that honors us deeply, while also challenging us to do justice to the artistic masterpiece of Claudio Silverstrin and John Pawson. The House was finished in 1989 and is one of the most important architectural buildings in the world. The task is to establish the house as a brand and to expand the recognition of the house from architecture students and experts towards a global audience. </h1>
               <h1 className="container-description" >This includes the building of a social media strategy as well as content production, collaboration management with clothing and lifestyle brands that carry the same minimalistic and luxurious approach and the development of a brand strategy.</h1>
               <h1 className="container-description" >Our first steps were to renew the Instagram account by removing old content and starting a new regular post strategy with content made by renowned photographers that had visited the house before. To express our gratitude for an article by the Openhouse Magazine we created a dedicated post showing the magazine in a CGI rebuild of the house. </h1>
@@ -473,7 +473,7 @@ function App() {
               <img className="white-button-image" src="/projectimage.png" />
             </div>
             <div className="white-button-right" >
-              <h1 className="container-heading" >BRAND CONCEPT</h1>
+              <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >For the D/Partment In-House Brand our task was to develop a brand concept that includes a business plan, market research, a design concept as well as production-ready designs for the first interior collection.</h1>
               <h1 className="container-description" >The brand has been conceptualized to enhance the experience of a streetwear store based on Gen-Z and to act on the gap in the market considering interior design for Gen Z </h1>
             </div>
@@ -650,40 +650,42 @@ function App() {
               </div>
 
             {/* Render selected project overlay if a project is clicked */}
-            {selectedProject && (
-              <div className={`${selectedProject}-overlay`}>
-                <div className="project-picture-overlay" >
-                  <div className="project-pictures" >
-                  {projectDetails[selectedProject].images.map((imageName, index) => (
-                  <img
-                    key={index}
-                    className="project-image"
-                    src={imageName} // Use the image filename directly from projectDetails
-                    alt={`Project ${selectedProject} Image ${index + 1}`}
-                  />
-                  ))}
-                  </div>
-                </div>
-                <div className="project-text-overlay" >
-                  <div className="project-top" >
-                    <h1 className="project-top-text" >{projectDetails[selectedProject].title}</h1>
-                    <button className="close-button" onClick={handleCloseProjectOverlay}>
-                      <i class="fa-solid fa-xmark"></i>
-                    </button>
-                  </div>
-                  <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
-                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionTwo}</p>
-                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionThree}</p>
-                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFour}</p>
-                  <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFive}</p>
-                </div>
-              </div>
-            )}
+
 
             </div>
           </div>
         </div>
       </CSSTransition>
+
+      {selectedProject && (
+              <div className={`${selectedProject}-overlay`}>
+                <div className="projects-overlay-content" >
+                  <div className="project-left-overlay" >
+                    {projectDetails[selectedProject].images.map((imageName, index) => (
+                      <img
+                        key={index}
+                        className="project-image"
+                        src={imageName} // Use the image filename directly from projectDetails
+                        alt={`Project ${selectedProject} Image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                  <div className="project-right-overlay" >
+                    <div className="project-top" >
+                      <h1 className="project-top-text" >{projectDetails[selectedProject].title}</h1>
+                      <button className="close-button" onClick={handleCloseProjectOverlay}>
+                        <i class="fa-solid fa-xmark"></i>
+                     </button>
+                    </div>
+                    <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
+                    <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionTwo}</p>
+                    <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionThree}</p>
+                    <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFour}</p>
+                    <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFive}</p>
+                    </div>
+                </div>
+              </div>
+            )}
     </>
   );
 }
