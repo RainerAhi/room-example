@@ -485,7 +485,7 @@ function App() {
       <div className="overlay">
         <div className="overlay-navigation">
           <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
-            <img src={iconSrc} />
+            <img className="nav-icon" src={iconSrc} />
           </div>
           {/* Conditional rendering based on visibility state */}
           {isFullNavigationVisible && (
@@ -581,7 +581,7 @@ function App() {
             {isFullNavigationMenu && (
               <div className="overlay-navigation">
                 <div className="navigation-icon" onClick={handleFullNavigationIconClick}>
-                  <img src={iconSrc2} />
+                  <img className="nav-icon" src={iconSrc2} />
                 </div>
                 {/* Conditional rendering based on visibility state */}
                 {isFullNavigationVisible && (

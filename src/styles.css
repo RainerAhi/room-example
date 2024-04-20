@@ -172,11 +172,17 @@ body,
   background-color: transparent;
   border: none;
   font-family: 'Avenir', sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: #f3f1ed;
   z-index: 20;
   cursor: pointer;
+  margin-right: -5%;
+}
+
+.nav-icon {
+  width: 75%;
+  align-self: flex-end;
 }
 
 .navigation-icon {
@@ -354,11 +360,12 @@ body,
   border: none;
   font-family: 'Avenir', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: black;
   z-index: 20;
   cursor: pointer;
+  margin-right: -5%;
 }
 
 .lines-two {
@@ -700,7 +707,7 @@ body,
     border: none;
     font-family: 'Avenir', sans-serif;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     color: black;
     z-index: 20;
