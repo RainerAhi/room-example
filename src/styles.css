@@ -575,6 +575,7 @@ body,
   flex-direction: row;
   overflow: hidden;
   justify-content: space-between;
+  margin-bottom: 5%;
 }
 
 .white-button-left {
