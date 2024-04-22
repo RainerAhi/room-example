@@ -108,6 +108,20 @@ function App() {
     playSoundEffect();
   };
 
+  const handleNavigationIconNavigateClick = () => {
+    setShowNavigationIconOverlay(false); // Show the navigation icon overlay
+    setIsFullNavigationVisible(false); // Toggle visibility
+    setShowFullOverlay(true);
+    playSoundEffect();
+  };
+
+  const handleNavigationIconNavigateClick2 = () => {
+    setShowNavigationIconOverlay2(false); // Show the navigation icon overlay
+    setIsFullNavigationVisible(false); // Toggle visibility
+    setShowFullOverlay(false);
+    playSoundEffect();
+  };
+
   const handleNavigationIconCloseClick2 = () => {
     setShowNavigationIconOverlay2(false); // Show the navigation icon overlay
     setIsFullNavigationVisible(false); // Toggle visibility
@@ -524,6 +538,7 @@ function App() {
                 {isFullNavigationVisible && (
                   <>
                     <button className="navigation-text-back" onClick={handleNavigationIconCloseClick} >SHOWROOM</button>
+                    <button className="navigation-text-back" onClick={handleNavigationIconNavigateClick} >ARCHIVE</button>
                   </>
                 )}
             </div>
@@ -695,7 +710,8 @@ function App() {
               </div>
                 {isFullNavigationVisible && (
                   <>
-                    <button className="navigation-text-back" onClick={handleNavigationIconCloseClick2} >ARCHIVE</button>
+                    <button className="navigation-text-back" onClick={handleNavigationIconCloseClick2} >ARCHIVE</button>  
+                    <button className="navigation-text-back" onClick={handleNavigationIconNavigateClick2} >SHOWROOM</button>  
                   </>
                 )}
             </div>
