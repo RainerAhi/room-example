@@ -89,7 +89,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
               <div className='white-button' onClick={handleWhiteButtonFive} ></div>
             </Html>
             <ToneMapping />
-            <Experience />
+            <Experience handleWhiteButtonOne={handleWhiteButtonOne} />
          </Canvas>
         </>
     )

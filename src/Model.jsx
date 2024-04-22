@@ -3,72 +3,40 @@ import { useGLTF, useAnimations, PerspectiveCamera, ScrollControls, useScroll, H
 import { useFrame } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive';
 
-export default function Model(props) {
+export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final3.glb')
+  const { nodes, materials, animations } = useGLTF('./final7-2.glb')
   const { actions, ref } = useAnimations(animations, group)
+  const [anim3Playing, setAnim3Playing] = useState(false);
 
-  useEffect(() => void (actions.Anim_0.reset().play().paused = true), [])
-  useFrame(() => (actions.Anim_0.time = actions.Anim_0.getClip().duration * scroll.offset))
+  useEffect(() => void (actions.Camera.reset().play().paused = true), [])
+  useFrame(() => (actions.Camera.time = actions.Camera.getClip().duration * scroll.offset))
 
   useEffect(() => {
     // Loop through all animations and start them except Anim_0
     for (const key in actions) {
-      if (key !== 'Anim_0') {
+      if (key !== 'Camera' && key !== 'Anim_3') {
         actions[key].reset().play();
       }
     }
   }, []); // Run this effect only once after component mount
 
+  const handleAnim3Click = () => {
+    if (!anim3Playing) {
+      actions.Anim_3.reset().play();
+      setAnim3Playing(true);
+    }
+  };
+
+
 
   
   return (
+    <>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group
-          name="sideboard"
-          position={[-1.899, 0.321, -1.935]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}>
-          <mesh
-            name="drawer1"
-            castShadow
-            receiveShadow
-            geometry={nodes.drawer1.geometry}
-            material={materials.metal}
-            position={[36.498, -0.699, -16.911]}
-          />
-          <mesh
-            name="stone"
-            castShadow
-            receiveShadow
-            geometry={nodes.stone.geometry}
-            material={materials['Material.008']}
-            position={[11.498, -10.193, -0.357]}
-          />
-        </group>
-        <mesh
-          name="Buch_1001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Buch_1001.geometry}
-          material={materials['Material.009']}
-          position={[-2.022, 0.652, -2.045]}
-          rotation={[-Math.PI, -1.476, 0]}
-          scale={0.01}
-        />
-        <mesh
-          name="Buch_7001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Buch_7001.geometry}
-          material={materials['Material.010']}
-          position={[-1.816, 0.384, -2.037]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
         <mesh
           name="circles001"
           castShadow
@@ -79,7 +47,6 @@ export default function Model(props) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <group name="DOT1" />
         <mesh
           name="traventine_stools"
           castShadow
@@ -148,35 +115,83 @@ export default function Model(props) {
           />
         </group>
         <mesh
-          name="Cube_(Copy)"
-          castShadow
-          receiveShadow
-          geometry={nodes['Cube_(Copy)'].geometry}
-          material={materials.emeka}
-          position={[-8.909, 1.6, -0.099]}
-          rotation={[-2.503, -1.553, -2.503]}
-        >
-          <PerspectiveCamera fov={isMobile ? 85 : 40} makeDefault/>
-        </mesh>
-        <mesh
           name="titles"
           castShadow
           receiveShadow
           geometry={nodes.titles.geometry}
           material={materials['Material.001']}
-          position={[-0.05, 0.005, 0.048]}
+          position={[-0.05, 0.01, 0.048]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
+        <group onClick={handleAnim3Click} name="sideboard" position={[-1.899, 0.321, -1.935]}>
+          <mesh
+            name="Buch1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Buch1.geometry}
+            material={materials['Material.009']}
+            position={[-0.123, 0.33, -0.11]}
+            rotation={[Math.PI / 2, 0, -1.476]}
+          />
+          <mesh
+            name="Buch7"
+            castShadow
+            receiveShadow
+            geometry={nodes.Buch7.geometry}
+            material={materials['Material.010']}
+            position={[0.083, 0.063, -0.102]}
+          />
+          <mesh
+            name="null"
+            castShadow
+            receiveShadow
+            geometry={nodes['null'].geometry}
+            material={materials.metal}
+            position={[-0.212, 0.187, -0.123]}
+          />
+          <mesh
+            name="stone"
+            castShadow
+            receiveShadow
+            geometry={nodes.stone.geometry}
+            material={materials['Material.008']}
+            position={[0.115, 0.004, -0.102]}
+          />
+        </group>
         <mesh
-          name="null"
+          name="drawer1"
           castShadow
           receiveShadow
-          geometry={nodes['null'].geometry}
+          geometry={nodes.drawer1.geometry}
           material={materials.metal}
-          position={[-2.111, 0.509, -2.058]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
+          position={[-1.534, 0.491, -1.942]}>
+          <mesh
+            name="Buch002"
+            castShadow
+            receiveShadow
+            geometry={nodes.Buch002.geometry}
+            material={materials['leather.001']}
+            position={[-0.282, -0.034, -0.161]}
+          />
+        </mesh>
+        <mesh
+          name="Plane1"
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane1.geometry}
+          material={nodes.Plane1.material}
+          position={[0.011, -0.173, 0.147]}
+          rotation={[-1.888, -0.364, -3.084]}
+        />
+        <mesh
+          name="Plane"
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane.geometry}
+          material={nodes.Plane.material}
+          position={[-0.104, -0.148, -0.125]}
+          rotation={[-1.107, 0.218, 0.354]}
         />
         <mesh
           name="maps_baker1"
@@ -186,8 +201,38 @@ export default function Model(props) {
           material={materials['Material.011']}
           position={[-10.521, 1.629, 0.001]}
           rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}>
+          <mesh
+            name="Plane002"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane002.geometry}
+            material={materials.metal}
+            position={[-10.378, -12.462, 14.82]}
+            rotation={[-1.027, 0.346, -0.232]}
+          />
+          <mesh
+            name="Plane_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane_1.geometry}
+            material={materials.metal}
+            position={[1.12, 14.674, 17.286]}
+            rotation={[1.233, -0.054, 2.777]}
+          />
+        </mesh>
+        <mesh
+          name="Cube__Copy_"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube__Copy_.geometry}
+          material={nodes.Cube__Copy_.material}
+          position={[-10.495, 1.6, -0.099]}
+          rotation={[1.571, -0.009, 1.583]}
           scale={0.01}
-        />
+        >
+          <PerspectiveCamera far={ 10000 } rotation={ [ Math.PI * -0.5, 0, 0 ] } fov={isMobile ? 85 : 40} makeDefault/>
+        </mesh>
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -206,12 +251,6 @@ export default function Model(props) {
             position={[0, 0, -244.617]}
           />
         </group>
-        <group
-          name="susu"
-          position={[3.355, 1.232, 2.796]}
-          rotation={[Math.PI / 2, 0.157, 0]}
-          scale={0.01}
-        />
         <mesh
           name="emeka"
           castShadow
@@ -291,8 +330,8 @@ export default function Model(props) {
                 receiveShadow
                 geometry={nodes.small_statue.geometry}
                 material={materials['Material.013']}
-                position={[22.766, 2.288, -22.387]}
-                rotation={[0.052, 0.209, 2.997]}
+                position={[22.739, 2.415, -23.481]}
+                rotation={[0.11, 0.152, 2.977]}
               />
             </mesh>
             <mesh
@@ -327,7 +366,8 @@ export default function Model(props) {
         </group>
       </group>
     </group>
+    </>
   )
 }
 
-useGLTF.preload('./final3.glb')
+useGLTF.preload('/final7-2.glb')

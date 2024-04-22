@@ -3,7 +3,7 @@ import Model from './Model'
 import { Suspense, useState } from 'react'
 import { EffectComposer, N8AO } from '@react-three/postprocessing'
 
-export default function Experience() {
+export default function Experience({ handleWhiteButtonOne }) {
 
   const [showOtherDiv, setShowOtherDiv] = useState(false);
 
@@ -15,11 +15,15 @@ export default function Experience() {
     setShowOtherDiv(true);
   };
 
+  const handleWhiteButtonOneClick = () => {
+    handleWhiteButtonOne(); // Call toggleOverlay function from props
+  };
+
   return (
     <>
       <Suspense fallback  >
         <ScrollControls damping={1} maxSpeed={0.5} pages={10}>
-            <Model position={ [ 0, -2, 0 ] } />
+            <Model handleWhiteButtonOneClick={ handleWhiteButtonOneClick } position={ [ 0, -2, 0 ] } />
             <Environment files="./env4.hdr" background />
         </ScrollControls>
       </Suspense>
