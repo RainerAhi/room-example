@@ -238,6 +238,11 @@ function App() {
     }
   }, [active]); // Only run this effect when `active` changes
 
+  const handleScrollOverlayHide = () => {
+    // When the overlay is clicked, immediately hide it
+    setShowScrollOverlay(false);
+  };
+
   const [showOverlayOne, setShowOverlayOne] = useState(false);
   const [showOverlayTwo, setShowOverlayTwo] = useState(false);
   const [showOverlayThree, setShowOverlayThree] = useState(false);
@@ -315,7 +320,7 @@ function App() {
         )}
       </div>
 
-      <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`}>
+      <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`} onClick={ handleScrollOverlayHide }>
         <div className="scroll-top" >
           <i class="fa-solid fa-arrow-down-long white"></i>
           <h1 className="scroll-text" >Scroll to start tour</h1>
