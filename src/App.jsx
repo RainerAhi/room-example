@@ -714,7 +714,7 @@ function App() {
         <div className="navigation-icon-overlay-content" >
 
           <div className="overlay-texts" >
-            <h1 className="container-heading" >IMPRESSUM22222</h1>
+            <h1 className="container-heading" >IMPRESSUM</h1>
             <ul className="overlay-list" >
               <li><h1 className="container-description">Angaben gemäß § 5 TMG</h1></li>
               <li><h1 className="container-description">Moritz Otto</h1></li>
