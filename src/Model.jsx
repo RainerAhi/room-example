@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final8.glb')
+  const { nodes, materials, animations } = useGLTF('./final8-2.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -234,6 +234,46 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
+        <mesh
+          name="Cube_3"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube_3.geometry}
+          material={materials.metal}
+          position={[-0.882, 0.325, -2.168]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="Cube_4"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube_4.geometry}
+          material={materials.metal}
+          position={[-0.882, 0.325, -1.905]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="Cube_2"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube_2.geometry}
+          material={materials.metal}
+          position={[-2.687, 0.325, -2.168]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
+        <mesh
+          name="Cube_1"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube_1.geometry}
+          material={materials.metal}
+          position={[-2.687, 0.325, -1.905]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -370,4 +410,4 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   )
 }
 
-useGLTF.preload('./final8.glb')
+useGLTF.preload('/final8-2.glb')
