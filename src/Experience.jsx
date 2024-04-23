@@ -21,7 +21,7 @@ export default function Experience() {
       </EffectComposer>
       <directionalLight 
       color={ "#FCEBE4" }
-      shadow-bias={-0.005} castShadow position={[10, 35, -25]} 
+      shadow-bias={-0.0003} castShadow position={[10, 35, -25]} 
       intensity={1} shadow-mapSize={2048} shadow-mapSize-width={4096} 
       shadow-mapSize-height={4096} shadow-camera-near={0.1} shadow-camera-far={100} 
       >
