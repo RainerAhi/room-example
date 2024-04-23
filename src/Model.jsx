@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final7-2.glb')
+  const { nodes, materials, animations } = useGLTF('./final8.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -34,7 +34,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
 
   
   return (
-    <>
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
@@ -124,7 +123,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <group onClick={handleAnim3Click} name="sideboard" position={[-1.899, 0.321, -1.935]}>
+        <group name="sideboard" position={[-1.899, 0.321, -1.935]}>
           <mesh
             name="Buch1"
             castShadow
@@ -141,14 +140,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
             geometry={nodes.Buch7.geometry}
             material={materials['Material.010']}
             position={[0.083, 0.063, -0.102]}
-          />
-          <mesh
-            name="null"
-            castShadow
-            receiveShadow
-            geometry={nodes['null'].geometry}
-            material={materials.metal}
-            position={[-0.212, 0.187, -0.123]}
           />
           <mesh
             name="stone"
@@ -233,6 +224,16 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
         >
           <PerspectiveCamera far={ 10000 } rotation={ [ Math.PI * -0.5, 0, 0 ] } fov={isMobile ? 85 : 40} makeDefault/>
         </mesh>
+        <mesh
+          name="null"
+          castShadow
+          receiveShadow
+          geometry={nodes['null'].geometry}
+          material={materials.metal}
+          position={[-2.111, 0.509, -2.058]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}
+        />
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -366,8 +367,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
         </group>
       </group>
     </group>
-    </>
   )
 }
 
-useGLTF.preload('/final7-2.glb')
+useGLTF.preload('./final8.glb')
