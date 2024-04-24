@@ -322,11 +322,11 @@ function App() {
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`} onClick={ handleScrollOverlayHide }>
         <div className="scroll-top" >
-          <i class="fa-solid fa-arrow-down-long white"></i>
+          <i className="fa-solid fa-arrow-down-long white"></i>
           <h1 className="scroll-text" >Scroll to start tour</h1>
         </div>
         <div className="scroll-bottom" >
-          <i class="fa-solid fa-circle white"></i>
+          <i className="fa-solid fa-circle white"></i>
           <h1 className="scroll-text" >Click on items for info about the project</h1>
         </div>
       </div>
@@ -346,7 +346,7 @@ function App() {
       >
         <div className={`white-button-overlay ${showOverlayOne ? "active" : ""}`}>
           <button className="white-close-button" onClick={toggleOverlayOne}>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
@@ -381,7 +381,7 @@ function App() {
       >
         <div className={`white-button-overlay ${showOverlayTwo ? "active" : ""}`}>
           <button className="white-close-button" onClick={toggleOverlayTwo}>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
@@ -415,7 +415,7 @@ function App() {
       >
         <div className={`white-button-overlay ${showOverlayThree ? "active" : ""}`}>
           <button className="white-close-button" onClick={toggleOverlayThree}>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
@@ -449,7 +449,7 @@ function App() {
       >
         <div className={`white-button-overlay ${showOverlayFour ? "active" : ""}`}>
             <button className="white-close-button" onClick={toggleOverlayFour}>
-              <i class="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark"></i>
             </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
@@ -483,7 +483,7 @@ function App() {
       >
         <div className={`white-button-overlay ${showOverlayFive ? "active" : ""}`}>
           <button className="white-close-button" onClick={toggleOverlayFive}>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
@@ -984,7 +984,7 @@ function App() {
                     <div className="project-top" >
                       <h1 className="project-top-text" >{projectDetails[selectedProject].title}</h1>
                       <button className="close-button" onClick={handleCloseProjectOverlay}>
-                        <i class="fa-solid fa-xmark"></i>
+                        <i className="fa-solid fa-xmark"></i>
                      </button>
                     </div>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
