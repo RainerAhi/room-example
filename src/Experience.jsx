@@ -24,7 +24,6 @@ export default function Experience() {
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>
-      <ambientLight color={ "black" } intensity={ 0.5 } />
 
       </>
   )
