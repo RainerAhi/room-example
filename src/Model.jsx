@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final8-3.glb')
+  const { nodes, materials, animations } = useGLTF('./final9.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -140,14 +140,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
             material={materials['Material.010']}
             position={[0.083, 0.063, -0.102]}
           />
-          <mesh
-            name="stone"
-            castShadow
-            receiveShadow
-            geometry={nodes.stone.geometry}
-            material={materials['Material.008']}
-            position={[0.115, 0.004, -0.102]}
-          />
         </group>
         <mesh
           name="drawer1"
@@ -233,6 +225,26 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
+        <group
+          name="stone"
+          position={[-1.784, 0.325, -2.037]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.01}>
+          <mesh
+            name="Mesh024"
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh024.geometry}
+            material={materials['Material.008']}
+          />
+          <mesh
+            name="Mesh024_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh024_1.geometry}
+            material={materials.metal}
+          />
+        </group>
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -369,4 +381,4 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   )
 }
 
-useGLTF.preload('./final8-3.glb')
+useGLTF.preload('./final9.glb')
