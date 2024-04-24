@@ -549,7 +549,7 @@ function App() {
             </div>
           )}
         </div>
-        {/* <div className="sound-container kontakt-sound-container" onClick={toggleSound} >
+        <div className="sound-container kontakt-sound-container" onClick={toggleSound} >
               {isSoundPlaying ? (
               <img className="sound-container-image" src="/playingblack.png" />
               ) : (
@@ -558,7 +558,7 @@ function App() {
               {soundTextVisible && (
                 <h1 className="sound-text"></h1>
               )}
-        </div> */}
+        </div>
         <div className="navigation-icon-overlay-content" >
 
           <div className="overlay-texts" >
@@ -722,7 +722,7 @@ function App() {
             </div>
           )}
         </div>
-        {/* <div className="sound-container kontakt-sound-container" onClick={toggleSound} >
+        <div className="sound-container kontakt-sound-container" onClick={toggleSound} >
               {isSoundPlaying ? (
               <img className="sound-container-image" src="/playingblack.png" />
               ) : (
@@ -731,7 +731,7 @@ function App() {
               {soundTextVisible && (
                 <h1 className="sound-text"></h1>
               )}
-        </div> */}
+        </div>
         <div className="navigation-icon-overlay-content" >
 
           <div className="overlay-texts" >

@@ -242,7 +242,7 @@ a {
   position: relative;
   width: 50%;
   height: 100%;
-  margin-top: 1.75%;
+  margin-top: 2.25%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -251,7 +251,7 @@ a {
 .overlay-texts {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .overlay-list {
@@ -400,7 +400,6 @@ a {
 
 .container {
   width: 18%; /* Set the width of each container */
-  margin: 10px; /* Add margin around each container */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
