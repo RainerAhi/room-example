@@ -10,7 +10,6 @@ export default function Experience() {
       <Suspense fallback  >
         <ScrollControls damping={1} maxSpeed={0.5} pages={10}>
             <Model position={ [ 0, -2, 0 ] } />
-            <Environment files="./env4.hdr" background />
         </ScrollControls>
       </Suspense>
       <EffectComposer disableNormalPass >
@@ -24,6 +23,7 @@ export default function Experience() {
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>
+      <Environment files="./env4.hdr" background />
 
       </>
   )
