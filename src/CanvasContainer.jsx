@@ -44,52 +44,30 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
   const HtmlContent = () => {
     const { gl } = useThree();
     return (
-      <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.935]} >
-        <div className='white-button' onClick={handleWhiteButtonOne} ></div>
-      </Html>
+      <>
+        <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.935]} >
+          <div className='white-button' onClick={handleWhiteButtonOne} ></div>
+        </Html>
+        <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[3.25, -1.1, -1.5]} >
+          <div className='white-button' onClick={handleWhiteButtonTwo} ></div>
+        </Html>
+        <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[3.355, -0.7, 2.796]} >
+          <div className='white-button' onClick={handleWhiteButtonThree} ></div>
+        </Html>
+        <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[-2.85, -1.5, 1.36]} >
+          <div className='white-button' onClick={handleWhiteButtonFour} ></div>
+        </Html>
+        <Html distanceFactor={10} portal={{ current: gl.domElement.parentNode }} position={[-10.5, -0.75, 0]} >
+          <div className='white-button' onClick={handleWhiteButtonFive} ></div>
+        </Html>
+      </>
     );
   };
 
     return (
         <>
          <Canvas shadows >
-          <HtmlContent />
-
-            <Html
-              as="div"
-              distanceFactor={10}
-              wrapperClass=""
-              position={[3.25, -1.1, -1.5]}
-            >
-              <div className='white-button' onClick={handleWhiteButtonTwo} ></div>
-            </Html>
-
-            <Html
-              as="div"
-              distanceFactor={10}
-              wrapperClass=""
-              position={[3.355, -0.7, 2.796]}
-            >
-              <div className='white-button' onClick={handleWhiteButtonThree} ></div>
-            </Html>
-
-            <Html
-              as="div"
-              distanceFactor={10}
-              wrapperClass=""
-              position={[-2.85, -1.5, 1.36]}
-            >
-              <div className='white-button' onClick={handleWhiteButtonFour} ></div>
-            </Html>
-
-            <Html
-              as="div"
-              distanceFactor={10}
-              wrapperClass=""
-              position={[-10.5, -0.75, 0]}
-            >
-              <div className='white-button' onClick={handleWhiteButtonFive} ></div>
-            </Html>
+            <HtmlContent />
             <ToneMapping />
             <Experience handleWhiteButtonOne={handleWhiteButtonOne} />
          </Canvas>
