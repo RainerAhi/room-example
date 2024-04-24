@@ -5,9 +5,6 @@ import { EffectComposer, N8AO } from '@react-three/postprocessing'
 
 export default function Experience() {
 
-  const [showOtherDiv, setShowOtherDiv] = useState(false);
-
-
   return (
     <>
       <Suspense fallback  >
