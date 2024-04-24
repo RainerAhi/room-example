@@ -41,9 +41,19 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
     toggleOverlayFive(); 
   };
 
+  const HtmlContent = () => {
+    const { gl } = useThree();
+    return (
+      <Html transform portal={{ current: gl.domElement.parentNode }}         position={[-1.899, -1.5, -1.935]} >
+        Test
+      </Html>
+    );
+  };
+
     return (
         <>
          <Canvas shadows >
+          <HtmlContent />
             <Html
               as="div"
               distanceFactor={10}
