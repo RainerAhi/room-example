@@ -55,12 +55,14 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
     toggleOverlayFive(); 
   };
 
+  const [hidden, set] = useState()
+
 
   const HtmlContent = () => {
     const { gl } = useThree();
     return (
       <>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.935]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.85]} >
           <div className="white-button" onClick={handleWhiteButtonOne} ></div>
         </Html>
         <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[3.25, -1.1, -1.5]} >
