@@ -14,8 +14,8 @@ export default function Experience() {
         </ScrollControls>
       </Suspense>
       <directionalLight 
-        color={ "#FCEBE4" } shadow-bias={-0.0004} castShadow position={[10, 35, -25]} 
-        intensity={1} shadow-mapSize-width={4096} shadow-mapSize-height={4096} 
+        color={ "#FCEBE4" } shadow-bias={-0.001} castShadow position={[10, 35, -25]} 
+        intensity={1} shadow-mapSize-width={8192} shadow-mapSize-height={8192} 
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>

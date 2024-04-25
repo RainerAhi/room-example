@@ -77,7 +77,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
         <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-10.5, -0.3, 0]} >
           <div className="white-button" onClick={handleWhiteButtonFive} ></div>
         </Html>
-        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[12, 0, -0.16]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[13, 0, -0.16]} >
           <h1 className="navigation-text-experience" onClick={handleWhiteButtonText} >ARCHIVE</h1>
         </Html>
       </>
