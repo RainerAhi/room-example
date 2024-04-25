@@ -180,6 +180,18 @@ body,
   margin-right: -5%;
 }
 
+.navigation-text-experience {
+  background-color: transparent;
+  border: none;
+  font-family: 'Avenir', sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #f3f1ed;
+  z-index: 20;
+  cursor: pointer;
+  margin-right: -5%;
+}
+
 .nav-icon {
   width: 75%;
   align-self: flex-end;
@@ -533,9 +545,9 @@ a {
 /* 3D EXPERIENCE OVERLAYS */
 
 .white-button {
-  width: 8px;
-  height: 8px;
-  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
   background-color: #f3f1ed;
   pointer-events: all;
   position: relative;
@@ -545,8 +557,8 @@ a {
 }
 
 .white-button:hover {
-  width: 16px; /* Double the width on hover */
-  margin-left: -4px; /* Adjust left margin to center the expansion */
+  width: 100px; /* Double the width on hover */
+  margin-left: -25px; /* Adjust left margin to center the expansion */
 }
 
 .white-button-overlay {

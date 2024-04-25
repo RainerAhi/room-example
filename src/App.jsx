@@ -333,7 +333,7 @@ function App() {
 
       {/* Main experience container */}
       <div className="experience">
-        <CanvasContainer toggleOverlayOne={toggleOverlayOne} toggleOverlayTwo={toggleOverlayTwo} toggleOverlayThree={toggleOverlayThree} toggleOverlayFour={toggleOverlayFour} toggleOverlayFive={toggleOverlayFive} />
+        <CanvasContainer handleNavigationClick={ handleNavigationClick } toggleOverlayOne={toggleOverlayOne} toggleOverlayTwo={toggleOverlayTwo} toggleOverlayThree={toggleOverlayThree} toggleOverlayFour={toggleOverlayFour} toggleOverlayFive={toggleOverlayFive} />
       </div>
 
       {/* 3D experince overlays */}

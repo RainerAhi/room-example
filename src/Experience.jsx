@@ -20,7 +20,7 @@ export default function Experience() {
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>
       <EffectComposer disableNormalPass >
-        <N8AO aoRadius={20} distanceFalloff={0.5} intensity={2} screenSpaceRadius quality="high" halfRes  />
+        <N8AO aoRadius={20} distanceFalloff={0.2} intensity={1.7} screenSpaceRadius quality="high" halfRes  />
       </EffectComposer>
       <Environment files="./env4.hdr" background />
 
