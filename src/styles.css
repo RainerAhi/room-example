@@ -954,20 +954,15 @@ a {
 /* 3D EXPERIENCE OVERLAYS MOBILE */
 
 .white-button {
-  width: 8px;
-  height: 8px;
-  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
   background-color: #f3f1ed;
   pointer-events: all;
   position: relative;
   z-index: 1;
   transition: width 0.15s ease-in-out, margin 0.15s ease-in-out; /* Add margin to transition */
   cursor: pointer;
-}
-
-.white-button:hover {
-  width: 16px; /* Double the width on hover */
-  margin-left: -4px; /* Adjust left margin to center the expansion */
 }
 
 
