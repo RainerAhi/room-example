@@ -65,19 +65,19 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
         <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.85]} >
           <div className="white-button" onClick={handleWhiteButtonOne} ></div>
         </Html>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[3.25, -1.1, -1.5]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[3.25, -0.9, -1.5]} >
           <div className="white-button" onClick={handleWhiteButtonTwo} ></div>
         </Html>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[3.355, -0.7, 2.796]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[3.2, -0.7, 2.55]} >
           <div className="white-button" onClick={handleWhiteButtonThree} ></div>
         </Html>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-2.85, -1.5, 1.36]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-3.15, -1.16, 1.36]} >
           <div className="white-button" onClick={handleWhiteButtonFour} ></div>
         </Html>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-10.5, -0.75, 0]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-10.5, -0.3, 0]} >
           <div className="white-button" onClick={handleWhiteButtonFive} ></div>
         </Html>
-        <Html distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[12, 0, -0.16]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[12, 0, -0.16]} >
           <h1 className="navigation-text-experience" onClick={handleWhiteButtonText} >ARCHIVE</h1>
         </Html>
       </>
