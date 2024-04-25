@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./final10.glb')
+  const { nodes, materials, animations } = useGLTF('./final11.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -116,7 +116,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <group onClick={ handleAnim3Click } name="sideboard" position={[-1.899, 0.321, -1.935]}>
+        <group name="sideboard" position={[-1.899, 0.321, -1.935]}>
           <mesh
             name="Buch1"
             castShadow
@@ -385,4 +385,4 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   )
 }
 
-useGLTF.preload('./final10.glb')
+useGLTF.preload('./final11.glb')

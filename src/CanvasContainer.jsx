@@ -1,4 +1,4 @@
-import { Html } from "@react-three/drei";
+import { Html, Text } from "@react-three/drei";
 import Experience from "./Experience";
 import { Canvas } from '@react-three/fiber'
 import { useThree } from "@react-three/fiber";
