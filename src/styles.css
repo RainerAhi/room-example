@@ -505,11 +505,21 @@ a {
   justify-content: space-between;
   align-items: start;
   margin-left: 10%;
+  margin-bottom: 2.5%;
 }
 
 .project-three-extra-content {
   margin-left: 10%;
-  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  display: flex;
+  width: 90%;
+  height: auto;
+  flex-direction: row;
+  position: relative;
+}
+
+.project-three-extra-content-two {
+  margin-left: 0%;
   margin-bottom: 2.5%;
   display: flex;
   width: 90%;
@@ -574,18 +584,18 @@ a {
 
 .project-description-audio {
   font-family: 'Avenir', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 100%;
-  color: black;
   margin-bottom: 0%;
+  font-weight: 400;
 }
 
 .project-description-audio-small {
   font-family: 'Avenir', sans-serif;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  color: black;
+  font-size: 0.65rem;
+  line-height: 100%;
   text-align: justify;
+  font-weight: 400;
 }
 
 
@@ -1013,11 +1023,11 @@ a {
     justify-content: space-between;
     align-items: start;
     margin-left: 0%;
+    margin-bottom: 5%;
   }
 
   .project-three-extra-content {
     margin-left: 0%;
-    margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
     width: 100%;
@@ -1082,7 +1092,7 @@ a {
   
   .project-description-audio {
     font-family: 'Avenir', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 100%;
     color: black;
     margin-bottom: 0%;
@@ -1091,7 +1101,7 @@ a {
   .project-description-audio-small {
     font-family: 'Avenir', sans-serif;
     font-size: 0.75rem;
-    line-height: 1.25rem;
+    line-height: 100%;
     color: black;
     text-align: justify;
   }

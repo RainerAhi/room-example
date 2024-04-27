@@ -421,6 +421,29 @@ function App() {
             </div>
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
+              <div className="project-three-extra-content-two">
+                        <div className="audio-controls">
+                          <button className="play-button" onClick={handleTogglePlay}>
+                            {isPlaying ? <i className="fa-solid fa-stop" style={{ fontSize: '15px' }}></i> : <i className="fa-solid fa-play" style={{ fontSize: '15px' }}></i>}
+                          </button>
+                          <div className="progress-container">
+                            <svg className="progress-circle" viewBox="0 0 40 40">
+                              <circle cx="20" cy="20" r="15" fill="none" strokeWidth="1" stroke="#ccc"></circle>
+                              <circle className="progress-bar" cx="20" cy="20" r="15" fill="none" strokeWidth="3" stroke="black" strokeDasharray="94" strokeDashoffset={94 - (currentTime / duration) * 94}></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <audio
+                          ref={audioRef}
+                          src="/websitesound.mp3" // Path to your audio file in the public folder
+                          onTimeUpdate={handleTimeUpdate}
+                          onEnded={() => setIsPlaying(false)}
+                        ></audio>
+                        <div className="project-three-extra-content-column" >
+                          <h1 className="project-description-audio" >NKAKA: Art and Processes</h1>
+                          <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
+                        </div>
+              </div>
               <h1 className="container-description" >After being introduced to the project by Emeka Orekeke, our task was to develop a thoughtful communication for the artists artwork with the title “Art & Processes”. The artwork is part of the group exhibition “A Home for Something Unknown” at the Neuer Berliner Kunstverein. </h1>
               <h1 className="container-description" >Following the theme of dialogue and interdisciplinary design practices, which is discussed in the artwork we went ahead with a direct and collaborative approach. Speaking to Emeka revealed the objectives that lead us through the rest of the project. These being the idea of an interactive Artwork, symbolizing and encouraging communication and the themes of african artists as well as very personal memories of the artist himself and his childhood associations with Africa.</h1>
               <h1 className="container-description" >Continuing the collaboration we gathered ideas of how the central structure should look that was meant to hold the headphones and to indicate the heart of the artwork, being the five podcast episodes the artist dedicated to different black mentors. We wanted to draw references to a campfire which Emeka remembered to be a place in their backyard in Nigeria where the family would gather to tell stories under the moonlight. We came to the conclusion that we should build a structure resembling that campfire with the right height for the visitors to see each others face when sitting around it. The large black wall is meant to set the atmosphere and to lead focus onto the installation that has a circular light shining from above. Simplistic stools balance out the overall look and the information about the podcast is displayed further back on the walls. The large arrangement of the different aspects are meant to let the visitor explore the artwork slowly and in a more structured way, while leaving space for the interaction in the center of the scene. The dotted lines show the complex intertwinement and connections of African art around the world that the artist refers to as “Trans-Africanism” in his work. </h1>
