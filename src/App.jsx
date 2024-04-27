@@ -344,7 +344,7 @@ function App() {
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`} onClick={ handleScrollOverlayHide }>
         <div className="scroll-top" >
-          <i className="fa-solid fa-arrow-down-long white"></i>
+          <img className="scroll-element-image" src="/scrollelement.png" />
           <h1 className="scroll-text" >Scroll to start tour</h1>
         </div>
         <div className="scroll-bottom" >

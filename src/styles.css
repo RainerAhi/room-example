@@ -127,6 +127,11 @@ body,
   margin-bottom: 5%;
 }
 
+.scroll-element-image {
+  height: 75px;
+  width: auto;
+}
+
 .scroll-text {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
