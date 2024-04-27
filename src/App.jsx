@@ -305,6 +305,28 @@ function App() {
   };
 
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const handleTogglePlay = () => {
+    if (!isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleTimeUpdate = () => {
+    setCurrentTime(audioRef.current.currentTime);
+    setDuration(audioRef.current.duration);
+  };
+
+  const progress = (currentTime / duration) * 100;
+
+
   return (
     <>
       <LoadingScreen />
@@ -989,6 +1011,31 @@ function App() {
                         <i className="fa-solid fa-xmark"></i>
                      </button>
                     </div>
+                    {selectedProject === "project-three" && (
+                      <div className="project-three-extra-content">
+                        <div className="audio-controls">
+                          <button className="play-button" onClick={handleTogglePlay}>
+                            {isPlaying ? <i className="fa-solid fa-stop" style={{ fontSize: '15px' }}></i> : <i className="fa-solid fa-play" style={{ fontSize: '15px' }}></i>}
+                          </button>
+                          <div className="progress-container">
+                            <svg className="progress-circle" viewBox="0 0 40 40">
+                              <circle cx="20" cy="20" r="15" fill="none" strokeWidth="1" stroke="#ccc"></circle>
+                              <circle className="progress-bar" cx="20" cy="20" r="15" fill="none" strokeWidth="3" stroke="black" strokeDasharray="94" strokeDashoffset={94 - (currentTime / duration) * 94}></circle>
+                            </svg>
+                          </div>
+                        </div>
+                        <audio
+                          ref={audioRef}
+                          src="/websitesound.mp3" // Path to your audio file in the public folder
+                          onTimeUpdate={handleTimeUpdate}
+                          onEnded={() => setIsPlaying(false)}
+                        ></audio>
+                        <div className="project-three-extra-content-column" >
+                          <h1 className="project-description-audio" >NKAKA: Art and Processes</h1>
+                          <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
+                        </div>
+                    </div>
+                    )}
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionTwo}</p>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionThree}</p>

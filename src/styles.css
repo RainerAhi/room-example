@@ -507,6 +507,90 @@ a {
   margin-left: 10%;
 }
 
+.project-three-extra-content {
+  margin-left: 10%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  display: flex;
+  width: 90%;
+  height: auto;
+  flex-direction: row;
+  position: relative;
+}
+
+.audio-controls {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+.play-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.fa-stop, .fa-play {
+  color: black;
+  font-size: 1vw;
+}
+
+.progress-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.progress-circle {
+  width: auto;
+  height: auto;
+}
+
+.progress-bar {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.3s;
+}
+
+.project-three-extra-content-column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.project-description-audio {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.85rem;
+  line-height: 100%;
+  color: black;
+  margin-bottom: 0%;
+}
+
+.project-description-audio-small {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: black;
+  text-align: justify;
+}
+
+
+
+
 .project-top-text {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
@@ -521,6 +605,8 @@ a {
   color: black;
   margin-left: 10%;
   text-align: justify;
+  margin-top: 0%;
+  margin-bottom: 2.5%;
 }
 
 .fa-solid, .fa-xmark {
@@ -774,15 +860,16 @@ a {
 
 
   .containers {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 7.5vh;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Space evenly between the two rows */
     align-items: center;
     overflow: scroll;
+    gap: 25px;
   }
   
   .row {
@@ -791,6 +878,7 @@ a {
     flex-direction: column;
     justify-content: space-evenly; /* Space evenly within each row */
     margin-left: 0%;
+    gap: 25px;
   }
   
   .container {
@@ -842,8 +930,8 @@ a {
   }
   .navigation-icon-overlay-content {
     position: relative;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     height: 100vh;
     margin-top: 1.75%;
     display: flex;
@@ -894,10 +982,10 @@ a {
   }
   
   .project-left-overlay {
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 2.5%;
-    height: auto;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -910,12 +998,12 @@ a {
   }
   
   .project-right-overlay {
-    width: 90%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 0px;
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 5%;
   }
   
@@ -925,6 +1013,87 @@ a {
     justify-content: space-between;
     align-items: start;
     margin-left: 0%;
+  }
+
+  .project-three-extra-content {
+    margin-left: 0%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .audio-controls {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    align-self: center;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 10vw;
+  }
+  
+  .fa-stop, .fa-play {
+    color: black;
+    font-size: 1vw;
+  }
+  
+  .progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 10vw;
+  }
+  
+  .progress-circle {
+    width: auto;
+    height: auto;
+  }
+  
+  .progress-bar {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.3s;
+  }
+  
+  .project-three-extra-content-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+  }
+  
+  .project-description-audio {
+    font-family: 'Avenir', sans-serif;
+    font-size: 0.85rem;
+    line-height: 100%;
+    color: black;
+    margin-bottom: 0%;
+  }
+  
+  .project-description-audio-small {
+    font-family: 'Avenir', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: black;
+    text-align: justify;
   }
   
   .project-top-text {
@@ -940,6 +1109,8 @@ a {
     line-height: 1.25rem;
     color: black;
     margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 5%;
   }
   
   .fa-solid, .fa-xmark {
@@ -980,12 +1151,12 @@ a {
 
 .white-button-navigation {
   position: relative;
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -1000,9 +1171,9 @@ a {
 }
 
 .white-button-left {
-  width: 90%;
-  margin-left: 0%;
-  height: auto;
+  width: 80%;
+  margin-left: 5%;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1014,12 +1185,12 @@ a {
 }
 
 .white-button-right {
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 0%;
+  margin-left: 5%;
   margin-top: 2.5%;
 }
   
