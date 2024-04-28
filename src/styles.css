@@ -183,6 +183,7 @@ body,
   z-index: 20;
   cursor: pointer;
   margin-right: -5%;
+  background-color: transparent;
 }
 
 .navigation-text-experience {
@@ -195,6 +196,7 @@ body,
   z-index: 20;
   cursor: pointer;
   margin-right: -5%;
+  background-color: transparent;
 }
 
 .nav-icon {
@@ -390,6 +392,7 @@ a {
   z-index: 20;
   cursor: pointer;
   margin-right: -5%;
+  background-color: transparent;
 }
 
 .lines-two {
@@ -442,6 +445,7 @@ a {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 600;
   color: black;
 }
 
@@ -451,6 +455,7 @@ a {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 0.5rem;
+  font-weight: 600;
   color: black;
 }
 
@@ -488,8 +493,24 @@ a {
   align-items: center;
   gap: 0px;
   overflow: scroll;
-  scrollbar-width: thin; /* Set width of the scrollbar */
-  scrollbar-color: #e0e0e0 #f3f1ed; /* Set color of the scrollbar (track and thumb) */
+}
+
+.project-left-overlay::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  display: flex;
+
+}
+
+.project-left-overlay::-webkit-scrollbar-track {
+  background-color: #f3f1ed; /* Set the color of the scrollbar track */
+}
+
+.project-left-overlay::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; /* Set the color of the scrollbar thumb */
+}
+
+.project-left-overlay::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc; /* Change thumb color on hover */
 }
 
 
@@ -627,6 +648,7 @@ a {
 .fa-solid, .fa-xmark {
   font-size: 1rem;
   cursor: pointer;
+  color: black;
 }
 
 .close-button {
@@ -640,8 +662,8 @@ a {
   margin-top: 2%;
   margin-right: 2%;
   border: none;
+  background-color: transparent;
 }
-
 
 /* 3D EXPERIENCE OVERLAYS */
 
@@ -707,8 +729,24 @@ a {
   align-items: center;
   gap: 0px;
   overflow: scroll;
-  scrollbar-width: thin; /* Set width of the scrollbar */
-  scrollbar-color: #e0e0e0 #f3f1ed; /* Set color of the scrollbar (track and thumb) */
+}
+
+.white-button-left::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  display: flex;
+
+}
+
+.white-button-left::-webkit-scrollbar-track {
+  background-color: #f3f1ed; /* Set the color of the scrollbar track */
+}
+
+.white-button-left::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; /* Set the color of the scrollbar thumb */
+}
+
+.white-button-left::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc; /* Change thumb color on hover */
 }
 
 .white-button-image {
@@ -868,6 +906,7 @@ a {
     text-transform: uppercase;
     color: black;
     z-index: 20;
+    background-color: transparent;
   }
 
 
@@ -915,6 +954,7 @@ a {
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
     line-height: 1.25rem;
+    font-weight: 600;
     color: black;
   }
 
@@ -924,6 +964,7 @@ a {
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    font-weight: 600;
     color: black;
   }
   
