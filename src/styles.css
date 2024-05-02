@@ -493,12 +493,12 @@ a {
   align-items: center;
   gap: 0px;
   overflow: scroll;
+  position: relative;
 }
 
 .project-left-overlay::-webkit-scrollbar {
   width: 8px; /* Set the width of the scrollbar */
   display: flex;
-
 }
 
 .project-left-overlay::-webkit-scrollbar-track {
@@ -511,11 +511,20 @@ a {
 
 .project-left-overlay::-webkit-scrollbar-thumb:hover {
   background-color: #ccc; /* Change thumb color on hover */
+  opacity: 1;
 }
 
 
 .project-image {
   width: 100%;
+}
+
+.project-left-overlay-button {
+  display: none;
+}
+
+.project-left-overlay-button-two {
+  display: none;
 }
 
 .project-right-overlay {
@@ -1046,11 +1055,44 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 0px;
+    overflow: hidden;
   }
   
   
   .project-image {
     width: 100%;
+  }
+
+  .project-left-overlay-button {
+    position: absolute;
+    top: 50%; /* Adjust these values based on your layout */
+    transform: translateY(-50%);
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+  }
+  
+  .project-left-overlay-button-two {
+    position: absolute;
+    top: 50%; /* Adjust these values based on your layout */
+    transform: translateY(-50%);
+    left: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+  }
+
+  .fa-chevron-right, .fa-chevron-left {
+    color: white;
+  }
+
+  .project-left-overlay::-webkit-scrollbar {
+    display: none;
   }
   
   .project-right-overlay {
@@ -1234,6 +1276,8 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 0px;
+  position: relative;
+  overflow: hidden;
 }
 
 .white-button-image {

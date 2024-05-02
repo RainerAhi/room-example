@@ -326,6 +326,101 @@ function App() {
 
   const progress = (currentTime / duration) * 100;
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? projectDetails[selectedProject].images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === projectDetails[selectedProject].images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+
+  const [currentImageIndexExp, setCurrentImageIndexExp] = useState(0);
+
+  const imagesSet1 = [
+    { src: '/s1.jpg' },
+    { src: '/s2.jpg' },
+    { src: '/s3.jpg' },
+    { src: '/s4.jpg' }
+  ];
+
+  const imagesSet2 = [
+    { src: '/emeka1.jpg' },
+    { src: '/emeka2.jpg' },
+    { src: '/emeka3.jpg' },
+    { src: '/emeka4.jpg' },
+    { src: '/emeka5.jpg' }
+  ];
+
+  const imagesSet3 = [
+    { src: '/susu1.jpg' },
+    { src: '/susu2.jpg' },
+    { src: '/susu3.jpg' },
+  ];
+
+  const imagesSet4 = [
+    { src: '/neue1.jpg' },
+    { src: '/neue2.jpg' },
+    { src: '/neue3.jpg' },
+  ];
+
+  const imagesSet5 = [
+    { src: '/b1.jpg' },
+    { src: '/b2.jpg' },
+    { src: '/b3.jpg' },
+  ];
+
+  const prevImage = () => {
+    setCurrentImageIndexExp((prevIndex) => {
+      if (prevIndex === 0) {
+        // If on the first image, go to the last image of the previous set
+        const currentSetIndex = Math.floor(prevIndex / imagesSet1.length);
+        const prevSetIndex = (currentSetIndex - 1 + [imagesSet1, imagesSet2, imagesSet3, imagesSet4, imagesSet5].length) % [imagesSet1, imagesSet2, imagesSet3, imagesSet4, imagesSet5].length;
+        const prevSet = [imagesSet1, imagesSet2, imagesSet3, imagesSet4, imagesSet5][prevSetIndex];
+        return prevSet.length - 1;
+      } else {
+        // Otherwise, move to the previous image
+        return prevIndex - 1;
+      }
+    });
+  };
+  
+  const nextImage = () => {
+    setCurrentImageIndexExp((prevIndex) => {
+      const currentSetIndex = Math.floor(prevIndex / imagesSet1.length);
+      const currentSet = [imagesSet1, imagesSet2, imagesSet3, imagesSet4, imagesSet5][currentSetIndex];
+      
+      if (prevIndex === currentSet.length * (currentSetIndex + 1) - 1) {
+        // If on the last image, go to the first image of the next set
+        const nextSetIndex = (currentSetIndex + 1) % [imagesSet1, imagesSet2, imagesSet3, imagesSet4, imagesSet5].length;
+        return nextSetIndex * imagesSet1.length;
+      } else {
+        // Otherwise, move to the next image
+        return prevIndex + 1;
+      }
+    });
+  };
 
   return (
     <>
@@ -377,12 +472,20 @@ function App() {
             </div>
           </div>
           <div className="white-button-content" >
-            <div className="white-button-left" >
-              <img className="white-button-image" src="/s1.jpg" />
-              <img className="white-button-image" src="/s2.jpg" />
-              <img className="white-button-image" src="/s3.jpg" />
-              <img className="white-button-image" src="/s4.jpg" />
-            </div>
+            {isMobile ? (
+              <div className="white-button-left" >
+               <img className="white-button-image" src={imagesSet1[currentImageIndexExp].src} />
+                <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
+                <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
+               </div>
+              ) : (
+                <div className="white-button-left" >
+                <img className="white-button-image" src="/s1.jpg" />
+                <img className="white-button-image" src="/s2.jpg" />
+                <img className="white-button-image" src="/s3.jpg" />
+                <img className="white-button-image" src="/s4.jpg" />
+                </div>
+            )}
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >The s30 sideboard is the first part of our object series and represents our agency as a standalone product. We are developing the sideboard in a holistic manner, covering the design and technical development as well as the production and the brand positioning.</h1>
@@ -412,13 +515,21 @@ function App() {
             </div>
           </div>
           <div className="white-button-content" >
-            <div className="white-button-left" >
-              <img className="white-button-image" src="/emeka1.jpg" />
-              <img className="white-button-image" src="/emeka2.jpg" />
-              <img className="white-button-image" src="/emeka3.jpg" />
-              <img className="white-button-image" src="/emeka4.jpg" />
-              <img className="white-button-image" src="/emeka5.jpg" />
-            </div>
+          {isMobile ? (
+              <div className="white-button-left" >
+               <img className="white-button-image" src={imagesSet2[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
+               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
+               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
+               </div>
+              ) : (
+                <div className="white-button-left" >
+                <img className="white-button-image" src="/emeka1.jpg" />
+                <img className="white-button-image" src="/emeka2.jpg" />
+                <img className="white-button-image" src="/emeka3.jpg" />
+                <img className="white-button-image" src="/emeka4.jpg" />
+                <img className="white-button-image" src="/emeka5.jpg" />
+                </div>
+            )}
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <div className="project-three-extra-content-two">
@@ -471,11 +582,19 @@ function App() {
             </div>
           </div>
           <div className="white-button-content" >
-            <div className="white-button-left" >
-              <img className="white-button-image" src="/susu1.jpg" />
-              <img className="white-button-image" src="/susu2.jpg" />
-              <img className="white-button-image" src="/susu3.jpg" />
-            </div>
+          {isMobile ? (
+              <div className="white-button-left" >
+               <img className="white-button-image" src={imagesSet3[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
+               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
+               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
+               </div>
+              ) : (
+                <div className="white-button-left" >
+                <img className="white-button-image" src="/susu1.jpg" />
+                <img className="white-button-image" src="/susu2.jpg" />
+                <img className="white-button-image" src="/susu3.jpg" />
+                </div>
+            )}
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >The long term partnership with Susu Accra is a very exciting opportunity for us. The set goal of the brand is to establish African luxury in the European market. Combining luxurious and yet modern design with contemporary marketing and presentation, this is a project that fits perfectly into our key strengths. Our task is to assist the brand strategically and to take on the creative direction of the brand going forward.</h1>
@@ -505,11 +624,19 @@ function App() {
             </div>
           </div>
           <div className="white-button-content" >
-            <div className="white-button-left" >
-              <img className="white-button-image" src="/neue1.jpg" />
-              <img className="white-button-image" src="/neue2.jpg" />
-              <img className="white-button-image" src="/neue3.jpg" />
-            </div>
+          {isMobile ? (
+              <div className="white-button-left" >
+               <img className="white-button-image" src={imagesSet4[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
+               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
+               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
+               </div>
+              ) : (
+                <div className="white-button-left" >
+                <img className="white-button-image" src="/neue1.jpg" />
+                <img className="white-button-image" src="/neue2.jpg" />
+                <img className="white-button-image" src="/neue3.jpg" />
+                </div>
+            )}
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >Our ongoing Partnership with the Neuendorf House is a project that honors us deeply, while also challenging us to do justice to the artistic masterpiece of Claudio Silverstrin and John Pawson. The House was finished in 1989 and is one of the most important architectural buildings in the world. The task is to establish the house as a brand and to expand the recognition of the house from architecture students and experts towards a global audience. </h1>
@@ -539,11 +666,19 @@ function App() {
             </div>
           </div>
           <div className="white-button-content" >
-            <div className="white-button-left" >
-              <img className="white-button-image" src="/b1.jpg" />
-              <img className="white-button-image" src="/b2.jpg" />
-              <img className="white-button-image" src="/b3.jpg" />
-            </div>
+          {isMobile ? (
+              <div className="white-button-left" >
+               <img className="white-button-image" src={imagesSet5[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
+               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
+               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
+               </div>
+              ) : (
+                <div className="white-button-left" >
+                <img className="white-button-image" src="/b1.jpg" />
+                <img className="white-button-image" src="/b2.jpg" />
+                <img className="white-button-image" src="/b3.jpg" />
+                </div>
+            )}
             <div className="white-button-right" >
               <h1 className="container-heading-2" >BRAND CONCEPT</h1>
               <h1 className="container-description" >With this boot we are currently designing for a german streetwear brand, our task was to expand the existing product line and to introduce a new category to the brand.</h1>
@@ -1022,10 +1157,11 @@ function App() {
                       <img
                         key={index}
                         className="project-image"
-                        src={imageName} // Use the image filename directly from projectDetails
-                        alt={`Project ${selectedProject} Image ${index + 1}`}
+                        src={isMobile ? projectDetails[selectedProject].images[currentImageIndex] : imageName}
                       />
                     ))}
+                      <button className="project-left-overlay-button" onClick={handlePrevImage}><i class="fa-solid fa-chevron-right"></i></button>
+                      <button className="project-left-overlay-button-two"  onClick={handleNextImage}><i class="fa-solid fa-chevron-left"></i></button>
                   </div>
                   <div className="project-right-overlay" >
                     <div className="project-top" >
