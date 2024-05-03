@@ -159,6 +159,8 @@ function App() {
   const projectDetails = {
     "project-one": {
       title: "NEUENDORF HOUSE BRAND BUILDING",
+      titleTwo: "Neuendorf house brand building",
+      projectLink: "https://room-example.vercel.app/",
       description: "on-going partnership",
       additionalInfo: "This project involves developing an in-house brand for Dpartment, currently in progress.",
       images: ["/neue1.jpg", "/neue2.jpg", "/neue3.jpg"],
@@ -171,6 +173,8 @@ function App() {
     },
     "project-two": {
       title: "SUSU ACCRA FASHION DESIGN AND ADVERTISEMENT",
+      titleTwo: "Susu accra fashion design and advertisement",
+      projectLink: "https://room-example.vercel.app/",
       description: "on-going partnership",
       additionalInfo: "Ongoing partnership with Neuendorf House for social media advertising.",
       images: ["/susu1.jpg", "/susu2.jpg", "/susu3.jpg"],
@@ -183,6 +187,8 @@ function App() {
     },
     "project-three": {
       title: "EMEKA OKEREKE ART EXHIBITION",
+      titleTwo: "Emeka okereke art exhibition",
+      projectLink: "https://room-example.vercel.app/",
       additionalInfo: "Collaborative work with SUSU on social media advertising campaigns.",
       images: ["/emeka1.jpg", "/emeka2.jpg", "/emeka3.jpg", "emeka4.jpg", "emeka5.jpg"],
       mainImage: "/emeka3.jpg",
@@ -194,6 +200,8 @@ function App() {
     },
     "project-four": {
       title: "S30 SIDEBOARD",
+      titleTwo: "S30 sideboard",
+      projectLink: "https://room-example.vercel.app/",
       description: "in process",
       additionalInfo: "Design project with Highsnobiety, currently in progress.",
       images: ["/s1.jpg", "/s2.jpg", "/s3.jpg", "/s4.jpg"],
@@ -206,6 +214,8 @@ function App() {
     },
     "project-five": {
       title: "BOOT DESIGN",
+      titleTwo: "Boot design",
+      projectLink: "https://room-example.vercel.app/",
       description: "in process",
       additionalInfo: "Renovation project for a residential property, currently underway.",
       images: ["/b1.jpg", "/b2.jpg", "/b3.jpg"],
@@ -493,6 +503,12 @@ function App() {
               <h1 className="container-description" >Defining the feeling of the agency for us meant to work with clear edges, simplistic and yet thoughtful and new. We came to the conclusion to combine natural stone and metal which are two of our defined brand materials. Ideally we will work with pumice since it also reflects our  brand colors.</h1>
               <h1 className="container-description" >The sideboard features two separate heights of drawers, that are held by a rail that is cut into the stone sides. The lower drawers can easily be moved up and down to achieve different looks and moods when using the sideboard. Each drawer opens individually at any position.</h1>
               <h1 className="container-description" >In the current process we are facing challenges in terms of production and technical realization which will be handled by our production manager in collaboration with local artisans and experts in stone and metal production. For us it is important to be as close to the production as possible to realize the project in the highest possible quality in terms of design and execution.</h1>
+              <a href="https://room-example.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <div className="project-overlay-links-exp">
+                  <img className="project-overlay-links-image" src="/s1.jpg" />
+                  <h1 className="project-overlay-links-text">S30 sideboard</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -560,6 +576,12 @@ function App() {
               <h1 className="container-description" >Continuing the collaboration we gathered ideas of how the central structure should look that was meant to hold the headphones and to indicate the heart of the artwork, being the five podcast episodes the artist dedicated to different black mentors. We wanted to draw references to a campfire which Emeka remembered to be a place in their backyard in Nigeria where the family would gather to tell stories under the moonlight. We came to the conclusion that we should build a structure resembling that campfire with the right height for the visitors to see each others face when sitting around it. The large black wall is meant to set the atmosphere and to lead focus onto the installation that has a circular light shining from above. Simplistic stools balance out the overall look and the information about the podcast is displayed further back on the walls. The large arrangement of the different aspects are meant to let the visitor explore the artwork slowly and in a more structured way, while leaving space for the interaction in the center of the scene. The dotted lines show the complex intertwinement and connections of African art around the world that the artist refers to as “Trans-Africanism” in his work. </h1>
               <h1 className="container-description" >The challenges of this project were to create a very clear language that leads to a real human interaction guided by the artwork. Understanding the ideas beyond what is said in the podcast and experiencing the nonverbal conversation that the artwork allows was not an easy task. The authenticity of the final result also comes from the direct dialogue we had with the artist and the personality that we were able to let the visitors take part in.</h1>
               <h1 className="container-description" >Finally the project resulted in an artwork that goes beyond the podcast itself and has touched people by enabling real conversations and interaction during the time of the exhibition in March and April 2024. As interdisciplinary artists we are happy to be part of the project and to support Emeka Orekeke for future exhibitions.</h1>
+              <a href="https://room-example.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <div className="project-overlay-links-exp">
+                  <img className="project-overlay-links-image" src="/emeka1.jpg" />
+                  <h1 className="project-overlay-links-text">Emeka okereke art exhibition</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -602,6 +624,12 @@ function App() {
               <h1 className="container-description" >To realize the project we have built a CGI environment that represents the freedom and lightness of the brand while also showing the artistic approach to the design. The falling fabric shows the individual inlays inspired by typical African prints that come with the bag. The video highlights the placement inside of Andreas Murkudis Berlin.</h1>
               <h1 className="container-description" >Creating a highly realistic texture for the bag was a challenge we mastered in this project, that will help the overall realism of future advertisements for the brand.</h1>
               <h1 className="container-description" >Currently we are able to extend our creative freedom in the project and plan on building a new product range that will let us reach our desired customer.</h1>
+              <a href="https://room-example.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <div className="project-overlay-links-exp">
+                  <img className="project-overlay-links-image" src="/susu1.jpg" />
+                  <h1 className="project-overlay-links-text">Susu accra fashion design and advertisement</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -644,6 +672,12 @@ function App() {
               <h1 className="container-description" >Our first steps were to renew the Instagram account by removing old content and starting a new regular post strategy with content made by renowned photographers that had visited the house before. To express our gratitude for an article by the Openhouse Magazine we created a dedicated post showing the magazine in a CGI rebuild of the house. </h1>
               <h1 className="container-description" >The reel includes an exact representation of the house that we built in 3D, to further work with the house in the digital world. Bringing the house into the digital world is part of our strategy to expand the house as a brand into different artistic worlds. The connection between the Neuendorf House and the Art world is already made not only by the impact of the architecture but also by the families online art platform Artnet. </h1>
               <h1 className="container-description" >In the ongoing partnership it will be our challenge to establish the Neuendorf House also in the new generations while maintaining the class and artistic approach of the cultural inheritance.</h1>
+              <a href="https://room-example.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <div className="project-overlay-links-exp">
+                  <img className="project-overlay-links-image" src="/susu1.jpg" />
+                  <h1 className="project-overlay-links-text">Neuendorf house brand building</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -685,6 +719,12 @@ function App() {
               <h1 className="container-description" >To approach this, we took inspiration from workwear and safety boots as well as human anatomy to create a combination of organic and geometric shapes. The upper part is made out of suede mixed with nylon for the tongue and an extra layer that secures the laces. To compliment the overall volume, the inside of the shoe is made of a padded fabric. The black and grey look of the boot together with the metal details refer back to the brands DNA.</h1>
               <h1 className="container-description" >While creating the boot we are acting as the production manager and therefore lead the conversations and negotiations about the product. Representing a streetwear brand that wants to produce low quantities this has been a challenge for us, in which we learned how handle a rather weak negotiation position while maintaining as much control over the design and also making good economic sense.</h1>
               <h1 className="container-description" >The project is currently in process and will be completed this year. It is our own take on the evolution of german streetwear brands and is meant to function as an image enhancer for the brand. It also expands our know how in both streetwear design and production.</h1>
+              <a href="https://room-example.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <div className="project-overlay-links-exp">
+                  <img className="project-overlay-links-image" src="/susu1.jpg" />
+                  <h1 className="project-overlay-links-text">Boot design</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -1200,6 +1240,12 @@ function App() {
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionThree}</p>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFour}</p>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionFive}</p>
+                    <a href={projectDetails[selectedProject].projectLink} target="_blank" rel="noopener noreferrer">
+                      <div className="project-overlay-links">
+                      <img className="project-overlay-links-image" src={projectDetails[selectedProject].mainImage} />
+                      <h1 className="project-overlay-links-text">{projectDetails[selectedProject].titleTwo}</h1>
+                      </div>
+                    </a>
                     </div>
                 </div>
               </div>

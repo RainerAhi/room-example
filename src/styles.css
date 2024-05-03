@@ -61,6 +61,11 @@ body,
   overflow: hidden;
 }
 
+.kontakt-sound-container {
+  position: fixed;
+  bottom: 0;
+}
+
 .sound-container-image {
   height: 25%;
   position: relative;
@@ -141,10 +146,6 @@ body,
 
 .fa-solid, .fa-arrow-down-long {
   font-size: 50px;
-}
-
-.white {
-  color: #f3f1ed;
 }
 
 /* NAV OVERLAY */
@@ -641,6 +642,7 @@ a {
   font-size: 1rem;
   line-height: 0rem;
   color: black;
+  font-weight: 600;
 }
 
 .project-description {
@@ -654,10 +656,45 @@ a {
   margin-bottom: 2.5%;
 }
 
+.project-overlay-links {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  position: relative;
+  margin-left: 10%;
+  align-items: start;
+  height: 4vh;
+  gap: 1%;
+}
+
+.project-overlay-links-exp {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  position: relative;
+  align-items: start;
+  height: 4vh;
+  gap: 1%;
+}
+
+.project-overlay-links-text {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.9rem;
+  line-height: 100%;
+  color: black;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.project-overlay-links-image {
+  height: 40%;
+}
+
 .fa-solid, .fa-xmark {
   font-size: 1rem;
   cursor: pointer;
   color: black;
+  background-color: transparent;
 }
 
 .close-button {
@@ -892,7 +929,7 @@ a {
   /* SOUND CONTAINER MOBILE */
 
   .kontakt-sound-container {
-    position: relative;
+    position: fixed;
     margin-top: -3%;
     margin-left: 2.5%;
     z-index: 15;
@@ -916,6 +953,33 @@ a {
     color: black;
     z-index: 20;
     background-color: transparent;
+  }
+
+  .scroll-top, .scroll-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  /* .scroll-top {
+    margin-top: -15%;
+  } */
+
+  
+  .scroll-element-image {
+    height: 50px;
+    width: auto;
+  }
+  
+
+  .scroll-text {
+    font-family: 'Avenir', sans-serif;
+    font-size: 0.75rem;
+    color: #f3f1ed;
+    font-weight: 400;
   }
 
 
@@ -1197,8 +1261,10 @@ a {
   .project-top-text {
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
-    line-height: 0rem;
+    line-height: 1.25rem;
     color: black;
+    font-weight: 600;
+    margin-top: 0.4%;
   }
   
   .project-description {
@@ -1214,6 +1280,7 @@ a {
   .fa-solid, .fa-xmark {
     font-size: 1rem;
     cursor: pointer;
+    background-color: transparent;
   }
   
   .close-button {
@@ -1295,6 +1362,10 @@ a {
 }
   
 
+}
+
+.white {
+  color: #f3f1ed;
 }
 
 
