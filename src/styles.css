@@ -386,7 +386,7 @@ a {
   background-color: transparent;
   border: none;
   font-family: 'Avenir', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75rem;
   text-transform: uppercase;
   color: black;
@@ -446,7 +446,7 @@ a {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
 }
 
@@ -456,7 +456,7 @@ a {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
 }
 
@@ -642,7 +642,7 @@ a {
   font-size: 1rem;
   line-height: 0rem;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .project-description {
@@ -682,7 +682,7 @@ a {
   font-size: 0.9rem;
   line-height: 100%;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 0;
 }
 
@@ -947,7 +947,7 @@ a {
     background-color: transparent;
     border: none;
     font-family: 'Avenir', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.75rem;
     text-transform: uppercase;
     color: black;
@@ -1027,7 +1027,7 @@ a {
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
   }
 
@@ -1037,7 +1037,7 @@ a {
     font-family: 'Avenir', sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
   }
   
@@ -1263,7 +1263,7 @@ a {
     font-size: 1rem;
     line-height: 1.25rem;
     color: black;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 0.4%;
   }
   
@@ -1285,6 +1285,17 @@ a {
   
   .close-button {
     border: none;
+  }
+
+  .project-overlay-links {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    position: relative;
+    margin-left: 0%;
+    align-items: start;
+    height: 4vh;
+    gap: 1%;
   }
 
 /* 3D EXPERIENCE OVERLAYS MOBILE */
