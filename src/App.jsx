@@ -189,6 +189,7 @@ function App() {
       title: "EMEKA OKEREKE ART EXHIBITION",
       titleTwo: "Emeka okereke art exhibition",
       projectLink: "https://room-example.vercel.app/",
+      description: "",
       additionalInfo: "Collaborative work with SUSU on social media advertising campaigns.",
       images: ["/emeka1.jpg", "/emeka2.jpg", "/emeka3.jpg", "emeka4.jpg", "emeka5.jpg"],
       mainImage: "/emeka3.jpg",
@@ -1191,6 +1192,18 @@ function App() {
 
       {selectedProject && (
               <div className={`${selectedProject}-overlay`}>
+                {isMobile && (
+                  
+                    <div className="white-button-navigation" >
+                      <div className="white-button-navigation-texts" >
+                        <h1 className="container-heading">{projectDetails[selectedProject].title}</h1>
+                        <h1 className="container-description">{projectDetails[selectedProject].description}</h1>
+                      </div>
+                      <button className="white-close-button" onClick={handleCloseProjectOverlay}>
+                        <i className="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                )}
                 <div className="projects-overlay-content" >
                   <div className="project-left-overlay" >
                     {projectDetails[selectedProject].images.map((imageName, index) => (
@@ -1204,12 +1217,14 @@ function App() {
                       <button className="project-left-overlay-button-two"  onClick={handleNextImage}><i class="fa-solid fa-chevron-left"></i></button>
                   </div>
                   <div className="project-right-overlay" >
-                    <div className="project-top" >
-                      <h1 className="project-top-text" >{projectDetails[selectedProject].title}</h1>
-                      <button className="close-button" onClick={handleCloseProjectOverlay}>
-                        <i className="fa-solid fa-xmark"></i>
-                     </button>
-                    </div>
+                    {!isMobile && (
+                      <div className="project-top">
+                        <h1 className="project-top-text">{projectDetails[selectedProject].title}</h1>
+                        <button className="close-button" onClick={handleCloseProjectOverlay}>
+                          <i className="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    )}
                     {selectedProject === "project-three" && (
                       <div className="project-three-extra-content">
                         <div className="audio-controls">
@@ -1234,6 +1249,9 @@ function App() {
                           <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
                         </div>
                     </div>
+                    )}
+                    {isMobile && (
+                      <h1 className="container-heading-brand" >BRAND CONCEPT</h1>
                     )}
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescription}</p>
                     <p className="project-description" >{projectDetails[selectedProject].projectsDescriptionTwo}</p>

@@ -20,6 +20,7 @@ body,
   margin: 0;
   padding: 0;
   background-color: #f3f1ed;
+  overscroll-behavior-y: none;
 }
 
 ::-webkit-scrollbar {
@@ -699,6 +700,7 @@ a {
 
 .close-button {
   border: none;
+  background-color: transparent;
 }
 
 .white-close-button {
@@ -731,7 +733,7 @@ a {
 }
 
 .white-button-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 95;
@@ -1040,6 +1042,16 @@ a {
     font-weight: 500;
     color: black;
   }
+
+  .container-heading-brand {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: black;
+  }
   
   .container-description {
     margin-top: 0;
@@ -1108,12 +1120,13 @@ a {
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    margin-top: 10vh;
   }
   
   .project-left-overlay {
     width: 80%;
     margin-left: 10%;
-    margin-top: 2.5%;
+    margin-top: 0%;
     height: 40vh;
     display: flex;
     flex-direction: column;
@@ -1166,7 +1179,7 @@ a {
     flex-direction: column;
     gap: 0px;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 0%;
   }
   
   .project-top {
@@ -1264,7 +1277,7 @@ a {
     line-height: 1.25rem;
     color: black;
     font-weight: 500;
-    margin-top: 0.4%;
+    margin-top: 3%;
   }
   
   .project-description {
@@ -1285,6 +1298,7 @@ a {
   
   .close-button {
     border: none;
+    background-color: transparent;
   }
 
   .project-overlay-links {
@@ -1296,6 +1310,11 @@ a {
     align-items: start;
     height: 4vh;
     gap: 1%;
+    margin-bottom: 20vh;
+  }
+
+  .project-overlay-links-exp {
+    margin-bottom: 20vh;
   }
 
 /* 3D EXPERIENCE OVERLAYS MOBILE */
@@ -1323,18 +1342,35 @@ a {
   background-color: #f3f1ed;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .white-button-navigation {
-  position: relative;
-  width: 80%;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 10%;
+  margin-top: 0%;
   margin-bottom: 5%;
+  align-items: center;
+  background-color: #f3f1ed;
+  z-index: 20;
+}
+
+.white-close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2%;
+  margin-right: 2%;
+  border: none;
+  background-color: transparent;
+  z-index: 30;
 }
 
 .white-button-content {
@@ -1344,6 +1380,7 @@ a {
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  margin-top: 10vh;
 }
 
 .white-button-left {
