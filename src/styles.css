@@ -21,6 +21,7 @@ body,
   padding: 0;
   background-color: #f3f1ed;
   overscroll-behavior-y: none;
+  touch-action: manipulation;
 }
 
 ::-webkit-scrollbar {
