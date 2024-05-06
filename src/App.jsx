@@ -245,10 +245,10 @@ function App() {
       }, 6000);
       const timer2 = setTimeout(() => {
         setShowScrollTop(true);
-      }, 1250);
+      }, 1500);
       const timer3 = setTimeout(() => {
         setShowScrollBottom(true);
-      }, 2500);
+      }, 3000);
 
       return () => {
         clearTimeout(timer);
