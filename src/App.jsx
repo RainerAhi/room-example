@@ -235,22 +235,31 @@ function App() {
 
   const { active } = useProgress();
   const [showScrollOverlay, setShowScrollOverlay] = useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollBottom, setShowScrollBottom] = useState(false);
 
   useEffect(() => {
     if (!active) {
-      // Hide scroll overlay after 5 seconds when loading is complete
       const timer = setTimeout(() => {
         setShowScrollOverlay(false);
-      }, 5000);
+      }, 6000);
+      const timer2 = setTimeout(() => {
+        setShowScrollTop(true);
+      }, 1250);
+      const timer3 = setTimeout(() => {
+        setShowScrollBottom(true);
+      }, 2500);
 
       return () => {
-        clearTimeout(timer); // Clear the timer if component unmounts or active changes
+        clearTimeout(timer);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
       };
     }
-  }, [active]); // Only run this effect when `active` changes
+  }, [active]);
+
 
   const handleScrollOverlayHide = () => {
-    // When the overlay is clicked, immediately hide it
     setShowScrollOverlay(false);
   };
 
@@ -449,11 +458,11 @@ function App() {
       </div>
 
       <div className={`scroll-overlay ${showScrollOverlay ? "" : "hidden"}`} onClick={ handleScrollOverlayHide }>
-        <div className="scroll-top" >
-          <img className="scroll-element-image" src="/scrollelement.png" />
+        <div className={`scroll-top ${showScrollTop ? "visible" : ""}`}>
+          <img className="scroll-element-image" src={ isMobile ? "/scrollmobile.png" : "/scrollelement.png"} />
           <h1 className="scroll-text" >Scroll to start tour</h1>
         </div>
-        <div className="scroll-bottom" >
+        <div className={`scroll-bottom ${showScrollBottom ? "visible" : ""}`}>
           <i className="fa-solid fa-circle white"></i>
           <h1 className="scroll-text" >Click on items for info about the project</h1>
         </div>

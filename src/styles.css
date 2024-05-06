@@ -133,6 +133,19 @@ body,
   margin-bottom: 5%;
 }
 
+.scroll-bottom, .scroll-top {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+}
+
+.scroll-bottom.visible {
+  opacity: 1;
+}
+
 .scroll-element-image {
   height: 75px;
   width: auto;
