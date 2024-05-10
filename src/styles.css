@@ -446,7 +446,7 @@ a {
 .container-one-image {
   width: 100%;
   position: relative;
-  background-color: #e0e0e0;
+  background-color: transparent;
 }
 
 .container-one-image-img {
@@ -1005,7 +1005,7 @@ a {
   .containers {
     width: 80%;
     margin-left: 10%;
-    margin-top: 7.5vh;
+    margin-top: 8.5vh;
     height: auto;
     display: flex;
     flex-direction: column;
