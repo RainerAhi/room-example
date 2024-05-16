@@ -48,7 +48,7 @@ body,
 /* SOUND TOGGLE */
 
 .sound-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   margin-left: 2%;
@@ -292,6 +292,13 @@ a {
 .overlay-list {
   list-style: none;
   padding: 0;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.overlay-list-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .container-description, .container-description-list  {
@@ -300,12 +307,10 @@ a {
   font-size: 0.75rem;
   color: black;
   font-weight: 400;
-  margin-bottom: 5px;
   text-align: justify;
 }
 
 .container-description-list {
-  margin-bottom: 0px;
 }
 
 .list-list, .list-list-bottom {
@@ -461,6 +466,18 @@ a {
   font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.container-small-heading {
+  margin-top: 1%;
+  margin-bottom: 0;
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-top: 0.75vh;
+  margin-bottom: 0.75vh;
   font-weight: 500;
   color: black;
 }
