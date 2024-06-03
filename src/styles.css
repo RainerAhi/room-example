@@ -747,6 +747,15 @@ a {
 /* 3D EXPERIENCE OVERLAYS */
 
 .white-button {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-button-inside {
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -758,9 +767,35 @@ a {
   cursor: pointer;
 }
 
-.white-button:hover {
+.white-button-inside:hover {
   width: 100px; /* Double the width on hover */
-  margin-left: -25px; /* Adjust left margin to center the expansion */
+  margin-left: -0px; /* Adjust left margin to center the expansion */
+}
+
+.grey-button {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey-button-inside {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #f3f1ed75;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  transition: width 0.15s ease-in-out, margin 0.15s ease-in-out; /* Add margin to transition */
+  cursor: pointer;
+}
+
+.grey-button-inside:hover {
+  width: 100px; /* Double the width on hover */
+  margin-left: -0px; /* Adjust left margin to center the expansion */
 }
 
 .white-button-overlay {
@@ -1350,7 +1385,7 @@ a {
 
 /* 3D EXPERIENCE OVERLAYS MOBILE */
 
-.white-button {
+.white-button-inside {
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -1360,6 +1395,15 @@ a {
   z-index: 1;
   transition: width 0.15s ease-in-out, margin 0.15s ease-in-out; /* Add margin to transition */
   cursor: pointer;
+}
+
+.white-button {
+  height: 175px;
+  width: 175px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
