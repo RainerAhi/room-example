@@ -174,7 +174,7 @@ function App() {
       projectsDescriptionFive: "In the ongoing partnership it will be our challenge to establish the Neuendorf House also in the new generations while maintaining the class and artistic approach of the cultural inheritance.",
     },
     "project-two": {
-      title: "SUSU ACCRA FASHION DESIGN AND ADVERTISEMENT",
+      title: "SUSU ACCRA BRAND STRATEGY",
       titleTwo: "Susu accra fashion design and advertisement",
       projectLink: "https://susuaccra.com/",
       description: "on-going partnership",
@@ -193,7 +193,7 @@ function App() {
       title: "EMEKA OKEREKE ART EXHIBITION",
       titleTwo: "Emeka okereke art exhibition",
       projectLink: "https://nkatapodcast.com/",
-      description: "",
+      description: "on-going partnership",
       additionalInfo: "Collaborative work with SUSU on social media advertising campaigns.",
       images: ["/emeka1.jpg", "/emeka2.jpg", "/emeka3.jpg", "emeka4.jpg", "emeka5.jpg"],
       mainImage: "/emeka3.jpg",
@@ -544,7 +544,7 @@ function App() {
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
               <h1 className="container-heading" >EMEKA OKEREKE ART EXHIBITION</h1>
-              <h1 className="container-description" ></h1>
+              <h1 className="container-description" >on-going partnership</h1>
             </div>
           </div>
           <div className="white-button-content" >
@@ -579,7 +579,7 @@ function App() {
                         </div>
                         <audio
                           ref={audioRef}
-                          src="/websitesound.mp3" // Path to your audio file in the public folder
+                          src="/podcast.wav" // Path to your audio file in the public folder
                           onTimeUpdate={handleTimeUpdate}
                           onEnded={() => setIsPlaying(false)}
                         ></audio>
@@ -616,7 +616,7 @@ function App() {
           </button>
           <div className="white-button-navigation" >
             <div className="white-button-navigation-texts" >
-              <h1 className="container-heading" >SUSU ACCRA FASHION DESIGN AND ADVERTISEMENT</h1>
+              <h1 className="container-heading" >SUSU ACCRA BRAND STRATEGY</h1>
               <h1 className="container-description" >on-going partnership</h1>
             </div>
           </div>
@@ -1340,13 +1340,13 @@ function App() {
                         </div>
                         <audio
                           ref={audioRef}
-                          src="/websitesound.mp3" // Path to your audio file in the public folder
+                          src="/podcast.wav" // Path to your audio file in the public folder
                           onTimeUpdate={handleTimeUpdate}
                           onEnded={() => setIsPlaying(false)}
                         ></audio>
                         <div className="project-three-extra-content-column" >
                           <h1 className="project-description-audio" >NKAKA: Art and Processes</h1>
-                          <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
+                          <h1 className="project-description-audio-small" >EP09: “Water will always find its crack”. Nkata with Ahmet Öğüt</h1>
                         </div>
                     </div>
                     )}
