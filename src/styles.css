@@ -970,7 +970,7 @@ a {
     right: 0;
     margin-top: 1.2%;
     z-index: 10;
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1141,13 +1141,13 @@ a {
     z-index: 21;
   }
   .navigation-icon-overlay-content {
-    position: relative;
     width: 80%;
     margin-left: 10%;
     height: 100vh;
-    margin-top: 1.75%;
+    margin-top: 8.5vh;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
   }
 
   .overlay-texts {

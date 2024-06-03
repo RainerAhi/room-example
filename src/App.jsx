@@ -340,6 +340,8 @@ function App() {
   const handleTogglePlay = () => {
     if (!isPlaying) {
       audioRef.current.play();
+      audio.pause();
+      setIsSoundPlaying(false);
     } else {
       audioRef.current.pause();
     }
@@ -1368,7 +1370,7 @@ function App() {
                         </div>
                         <audio
                           ref={audioRef}
-                          src="/websitesound.mp3" // Path to your audio file in the public folder
+                          src="/podcast.wav" // Path to your audio file in the public folder
                           onTimeUpdate={handleTimeUpdate}
                           onEnded={() => setIsPlaying(false)}
                         ></audio>
