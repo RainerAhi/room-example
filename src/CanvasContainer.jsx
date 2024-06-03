@@ -87,7 +87,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
             <div className="white-button-inside" />
           </div>
         </Html>
-        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[13, 0, -0.075]} >
+        <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[13, 0, 0]} >
           <div className="grey-button" onClick={handleWhiteButtonText} >
             <div className="grey-button-inside" />
           </div>
