@@ -585,7 +585,7 @@ function App() {
                         ></audio>
                         <div className="project-three-extra-content-column" >
                           <h1 className="project-description-audio" >NKAKA: Art and Processes</h1>
-                          <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
+                          <h1 className="project-description-audio-small" >EP09: “Water will always find its crack”. Nkata with Ahmet Öğüt</h1>
                         </div>
               </div>
               <h1 className="container-description" >After being introduced to the project by Emeka Okereke, our task was to develop a thoughtful communication for the artists artwork with the title “Art & Processes”. The artwork is part of the group exhibition “A Home for Something Unknown” at the Neuer Berliner Kunstverein.</h1>
@@ -1374,7 +1374,7 @@ function App() {
                         ></audio>
                         <div className="project-three-extra-content-column" >
                           <h1 className="project-description-audio" >NKAKA: Art and Processes</h1>
-                          <h1 className="project-description-audio-small" >EP01: “I wonder as I wander“ Nkata with Akinbode Akinbiyi</h1>
+                          <h1 className="project-description-audio-small" >EP09: “Water will always find its crack”. Nkata with Ahmet Öğüt</h1>
                         </div>
                     </div>
                     )}
