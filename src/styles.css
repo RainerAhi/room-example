@@ -258,6 +258,12 @@ body,
   overflow: scroll;
 }
 
+.contact-spacing {
+  height: 20vh;
+  width: 100%;
+  background-color: transparent;
+}
+
 a {
   text-decoration: none;
   color: black;

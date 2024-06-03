@@ -966,6 +966,7 @@ function App() {
                 <li><h1 className="container-description">Quelle: https://www.e-recht24.de</h1></li>
               </ul>
             </div>
+            <div className="contact-spacing" />
           </div>
 
         </div>
@@ -1178,6 +1179,7 @@ function App() {
                 <li><h1 className="container-description">Quelle: https://www.e-recht24.de</h1></li>
               </ul>
             </div>
+            <div className="contact-spacing" />
           </div>
 
         </div>
