@@ -522,7 +522,7 @@ function App() {
               <h1 className="container-description" >Defining the feeling of the agency for us meant to work with clear edges, simplistic and yet thoughtful and new. We came to the conclusion to combine natural stone and metal which are two of our defined brand materials. Ideally we will work with pumice since it also reflects our  brand colors.</h1>
               <h1 className="container-description" >The sideboard features two separate heights of drawers, that are held by a rail that is cut into the stone sides. The lower drawers can easily be moved up and down to achieve different looks and moods when using the sideboard. Each drawer opens individually at any position.</h1>
               <h1 className="container-description" >In the current process we are facing challenges in terms of production and technical realization which will be handled by our production manager in collaboration with local artisans and experts in stone and metal production. For us it is important to be as close to the production as possible to realize the project in the highest possible quality in terms of design and execution.</h1>
-              <a href="mailto:raineripost@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:recipient@gmail.com?subject=Subject%20Here&body=Body%20text%20here" target="_blank" rel="noopener noreferrer">
                 <div className="project-overlay-links-exp">
                   <img className="project-overlay-links-image" src="/s30.png" />
                   <h1 className="project-overlay-links-text">Price on request</h1>
