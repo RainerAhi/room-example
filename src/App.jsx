@@ -753,7 +753,7 @@ function App() {
           {isFullNavigationVisible && (
             <>
               <button className="navigation-text" onClick={handleNavigationClick} >ARCHIVE</button>
-              <button className="navigation-text" onClick={handleNavigationIconClick} >IMPRESSIUM</button>
+              <button className="navigation-text" onClick={handleNavigationIconClick} >IMPRESSUM</button>
             </>
           )}
         </div>
@@ -1208,7 +1208,7 @@ function App() {
                 {isFullNavigationVisible && (
                   <>
                     <button className="navigation-text-back" onClick={handleCloseOverlay} >SHOWROOM</button>
-                    <button className="navigation-text-back" onClick={handleNavigationIconClick2} >IMPRESSIUM</button>
+                    <button className="navigation-text-back" onClick={handleNavigationIconClick2} >IMPRESSUM</button>
                   </>
                 )}
               </div>

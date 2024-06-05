@@ -800,7 +800,7 @@ a {
 
 .grey-button-inside:hover {
   width: 100px; /* Double the width on hover */
-  margin-left: -0px; /* Adjust left margin to center the expansion */
+  margin-left: -25px; /* Adjust left margin to center the expansion */
 }
 
 .white-button-overlay {
