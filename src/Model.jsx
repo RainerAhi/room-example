@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./scene2.glb')
+  const { nodes, materials, animations } = useGLTF('./final11.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -249,35 +249,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <mesh
-          name="trikottest001"
-          castShadow
-          receiveShadow
-          geometry={nodes.trikottest001.geometry}
-          material={materials.Material_0}
-          position={[7.499, 0, 7.42]}
-          rotation={[-Math.PI, 0, -2.19]}
-          scale={0.1}
-        />
-        <mesh
-          name="trikottest002"
-          castShadow
-          receiveShadow
-          geometry={nodes.trikottest002.geometry}
-          material={materials['Material_0.001']}
-          position={[-0.219, 0, 10.218]}
-          scale={0.1}
-        />
-        <mesh
-          name="trikottest003"
-          castShadow
-          receiveShadow
-          geometry={nodes.trikottest003.geometry}
-          material={materials['Material_0.002']}
-          position={[-7.506, 0, 7.337]}
-          rotation={[-Math.PI, 0.186, -Math.PI]}
-          scale={0.1}
-        />
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh
             name="carabiner"
@@ -414,4 +385,4 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   )
 }
 
-useGLTF.preload('./scene2.glb')
+useGLTF.preload('./final11.glb')
