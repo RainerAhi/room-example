@@ -7,7 +7,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const scroll = useScroll()
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./scene.glb')
+  const { nodes, materials, animations } = useGLTF('./scene2.glb')
   const { actions, ref } = useAnimations(animations, group)
   const [anim3Playing, setAnim3Playing] = useState(false);
 
@@ -39,16 +39,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <mesh
-          name="circles001"
-          castShadow
-          receiveShadow
-          geometry={nodes.circles001.geometry}
-          material={materials.Material}
-          position={[1.543, 2.921, -0.244]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
         <mesh
           name="traventine_stools"
           castShadow
@@ -144,14 +134,6 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
             material={materials['Material.010']}
             position={[0.083, 0.063, -0.102]}
           />
-          <mesh
-            name="stone"
-            castShadow
-            receiveShadow
-            geometry={nodes.stone.geometry}
-            material={materials['Material.008']}
-            position={[0.115, 0.004, -0.102]}
-          />
         </group>
         <mesh
           name="drawer1"
@@ -237,43 +219,33 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
-        <mesh
-          name="Cube_3"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube_3.geometry}
-          material={materials.metal}
-          position={[-0.882, 0.325, -2.168]}
+        <group
+          name="stone"
+          position={[-1.784, 0.325, -2.037]}
           rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
+          scale={0.01}>
+          <mesh
+            name="Mesh024"
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh024.geometry}
+            material={materials['Material.008']}
+          />
+          <mesh
+            name="Mesh024_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh024_1.geometry}
+            material={materials.metal}
+          />
+        </group>
         <mesh
-          name="Cube_4"
+          name="circles"
           castShadow
           receiveShadow
-          geometry={nodes.Cube_4.geometry}
-          material={materials.metal}
-          position={[-0.882, 0.325, -1.905]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
-        <mesh
-          name="Cube_2"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube_2.geometry}
-          material={materials.metal}
-          position={[-2.687, 0.325, -2.168]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        />
-        <mesh
-          name="Cube_1"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube_1.geometry}
-          material={materials.metal}
-          position={[-2.687, 0.325, -1.905]}
+          geometry={nodes.circles.geometry}
+          material={materials.Material}
+          position={[1.543, 2.921, -0.244]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.01}
         />
@@ -283,8 +255,8 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           receiveShadow
           geometry={nodes.trikottest001.geometry}
           material={materials.Material_0}
-          position={[-7.414, 0.06, 7.395]}
-          rotation={[-Math.PI, 0.734, -Math.PI]}
+          position={[7.499, 0, 7.42]}
+          rotation={[-Math.PI, 0, -2.19]}
           scale={0.1}
         />
         <mesh
@@ -293,8 +265,7 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           receiveShadow
           geometry={nodes.trikottest002.geometry}
           material={materials['Material_0.001']}
-          position={[-0.014, 0.06, 10.467]}
-          rotation={[Math.PI, -0.034, Math.PI]}
+          position={[-0.219, 0, 10.218]}
           scale={0.1}
         />
         <mesh
@@ -303,8 +274,8 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
           receiveShadow
           geometry={nodes.trikottest003.geometry}
           material={materials['Material_0.002']}
-          position={[7.398, 0.061, 7.413]}
-          rotation={[Math.PI, -0.814, Math.PI]}
+          position={[-7.506, 0, 7.337]}
+          rotation={[-Math.PI, 0.186, -Math.PI]}
           scale={0.1}
         />
         <group name="hangers" position={[0, 2.689, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -443,5 +414,4 @@ export default function Model(props, { handleWhiteButtonOneClick }) {
   )
 }
 
-useGLTF.preload('./scene.glb')
-
+useGLTF.preload('./scene2.glb')
