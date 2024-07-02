@@ -4,6 +4,8 @@ import CanvasContainer from "./CanvasContainer";
 import { useProgress } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -451,6 +453,21 @@ function App() {
     });
   };
 
+  const images = [
+    {
+      original: "https://picsum.photos/id/1018/1000/600/",
+      thumbnail: "https://picsum.photos/id/1018/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1015/1000/600/",
+      thumbnail: "https://picsum.photos/id/1015/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1019/1000/600/",
+      thumbnail: "https://picsum.photos/id/1019/250/150/",
+    },
+  ];
+
   return (
     <>
       <LoadingScreen />
@@ -502,11 +519,7 @@ function App() {
           </div>
           <div className="white-button-content" >
             {isMobile ? (
-              <div className="white-button-left" >
-               <img className="white-button-image" src={imagesSet1[currentImageIndexExp].src} />
-                <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
-                <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
-               </div>
+              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images} />
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/s1.jpg" />
