@@ -396,6 +396,21 @@ function App() {
     { src: '/s4.jpg' }
   ];
 
+  const images1 = [
+    {
+      original: "/s1.jpg",
+    },
+    {
+      original: "/s2.jpg",
+    },
+    {
+      original: "/s3.jpg",
+    },
+    {
+      original: "/s4.jpg",
+    },
+  ];
+
   const imagesSet2 = [
     { src: '/emeka1.jpg' },
     { src: '/emeka2.jpg' },
@@ -404,10 +419,40 @@ function App() {
     { src: '/emeka5.jpg' }
   ];
 
+  const images2 = [
+    {
+      original: "/emeka1.jpg",
+    },
+    {
+      original: "/emeka2.jpg",
+    },
+    {
+      original: "/emeka3.jpg",
+    },
+    {
+      original: "/emeka4.jpg",
+    },
+    {
+      original: "/emeka5.jpg",
+    },
+  ];
+
   const imagesSet3 = [
     { src: '/susu6.jpg' },
     { src: '/susu5.jpg' },
     { src: '/susu4.jpg' },
+  ];
+
+  const images3 = [
+    {
+      original: "/susu6.jpg",
+    },
+    {
+      original: "/susu5.jpg",
+    },
+    {
+      original: "/susu4.jpg",
+    },
   ];
 
   const imagesSet4 = [
@@ -416,10 +461,34 @@ function App() {
     { src: '/neue3.jpg' },
   ];
 
+  const images4 = [
+    {
+      original: "/neue1.jpg",
+    },
+    {
+      original: "/neue2.jpg",
+    },
+    {
+      original: "/neue3.jpg",
+    },
+  ];
+
   const imagesSet5 = [
     { src: '/b1.jpg' },
     { src: '/b2.jpg' },
     { src: '/b3.jpg' },
+  ];
+
+  const images5 = [
+    {
+      original: "/b1.jpg",
+    },
+    {
+      original: "/b2.jpg",
+    },
+    {
+      original: "/b3.jpg",
+    },
   ];
 
   const prevImage = () => {
@@ -452,21 +521,6 @@ function App() {
       }
     });
   };
-
-  const images = [
-    {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
-    },
-    {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-  ];
 
   return (
     <>
@@ -519,7 +573,9 @@ function App() {
           </div>
           <div className="white-button-content" >
             {isMobile ? (
-              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images} />
+              <div className="white-button-left">
+                <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images1} disableSwipe={ true } />
+              </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/s1.jpg" />
@@ -564,11 +620,9 @@ function App() {
           </div>
           <div className="white-button-content" >
           {isMobile ? (
-              <div className="white-button-left" >
-               <img className="white-button-image" src={imagesSet2[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
-               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
-               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
-               </div>
+              <div className="white-button-left">
+              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images2} disableSwipe={ true } />
+            </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/emeka1.jpg" />
@@ -637,11 +691,9 @@ function App() {
           </div>
           <div className="white-button-content" >
           {isMobile ? (
-              <div className="white-button-left" >
-               <img className="white-button-image" src={imagesSet3[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
-               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
-               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
-               </div>
+              <div className="white-button-left">
+              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images3} disableSwipe={ true } />
+            </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/susu6.jpg" />
@@ -685,11 +737,9 @@ function App() {
           </div>
           <div className="white-button-content" >
           {isMobile ? (
-              <div className="white-button-left" >
-               <img className="white-button-image" src={imagesSet4[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
-               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
-               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
-               </div>
+              <div className="white-button-left">
+              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images4} disableSwipe={ true } />
+            </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/neue1.jpg" />
@@ -733,11 +783,9 @@ function App() {
           </div>
           <div className="white-button-content" >
           {isMobile ? (
-              <div className="white-button-left" >
-               <img className="white-button-image" src={imagesSet5[currentImageIndexExp].src} alt={`Image ${currentImageIndexExp + 1}`} />
-               <button className="project-left-overlay-button" onClick={prevImage}><i class="fa-solid fa-chevron-right"></i></button>
-               <button className="project-left-overlay-button-two" onClick={nextImage}><i class="fa-solid fa-chevron-left"></i></button>
-               </div>
+              <div className="white-button-left">
+              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images5} disableSwipe={ true } />
+            </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/b1.jpg" />
