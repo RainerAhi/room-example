@@ -5,7 +5,7 @@ import { useProgress } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
 import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
+import './image-gallery-styles.scss'
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -784,8 +784,8 @@ function App() {
           <div className="white-button-content" >
           {isMobile ? (
               <div className="white-button-left">
-              <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images5} disableSwipe={ true } />
-            </div>
+                <ImageGallery showNav={ true } showThumbnails={ false } showFullscreenButton={ false } showPlayButton={ false } items={images5} disableSwipe={ true } />
+              </div>
               ) : (
                 <div className="white-button-left" >
                 <img className="white-button-image" src="/b1.jpg" />
